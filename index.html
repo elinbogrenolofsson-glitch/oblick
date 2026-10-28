@@ -489,3 +489,35 @@ render();
 </script>
 </body>
 </html>
+
+/* FIX: keep the full archive navigation visible */
+body .layout > .sidebar{
+  display:grid!important;
+  visibility:visible!important;
+  opacity:1!important;
+  height:auto!important;
+  max-height:none!important;
+  overflow:visible!important;
+  position:relative!important;
+  z-index:2!important;
+}
+body .layout > .sidebar > .navbtn{
+  display:flex!important;
+  visibility:visible!important;
+  opacity:1!important;
+  color:#eee5d6!important;
+}
+body .layout > .sidebar > .navbtn:hover,
+body .layout > .sidebar > .navbtn.active{
+  color:#fff0dc!important;
+}
+@media(max-width:760px){
+  body .layout > .sidebar{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    padding:0 18px!important;
+  }
+  body .layout > .sidebar > .navbtn{
+    min-height:42px!important;
+    width:100%!important;
+  }
+}
