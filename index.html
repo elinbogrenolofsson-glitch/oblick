@@ -265,6 +265,84 @@ header{display:grid;grid-template-columns:1fr auto;align-items:center}
  .list-row > .list-year{display:none}
  .list-row div .list-year{display:block}
 }
+
+/* OBLICK FINAL ART DIRECTION — warm analog film archive */
+:root{
+ --bg:#e9e2d3;--panel:#f4eee2;--panel2:#ddd2bf;--line:#b9aa92;
+ --text:#25251f;--muted:#716b5f;--red:#8e3028;--red2:#a13b2e;
+ --serif:Georgia,'Times New Roman',serif;--sans:Arial,Helvetica,sans-serif;
+}
+html,body{background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}
+body{font-size:14px}
+.topline{height:4px;background:var(--red)}
+header{background:var(--bg);border:0!important;padding:22px clamp(18px,5vw,76px) 17px}
+.wordmark{font-family:Georgia,'Times New Roman',serif;font-size:29px;letter-spacing:.12em}
+.wordmark span{color:var(--red)}
+.brand-note{font:italic 14px Georgia,serif;color:var(--muted)}
+.header-right,.results-label,.eyebrow{font-family:'Courier New',monospace;letter-spacing:.08em}
+.hero{position:relative;background:#e1d6c3;border:0!important;padding:clamp(42px,5vw,68px) clamp(18px,5vw,76px) 38px;grid-template-columns:minmax(0,1fr) 240px;gap:40px;align-items:end}
+.hero:before{content:"OB / 001   •   LESEARKIV FÖR RÖRLIGA BILDER";position:absolute;top:18px;left:clamp(18px,5vw,76px);font:10px 'Courier New',monospace;letter-spacing:.06em;color:var(--red)}
+.hero .eyebrow{color:var(--red);font-size:10px}
+.hero h1{font:normal clamp(48px,8.4vw,116px)/.88 Georgia,'Times New Roman',serif;letter-spacing:-.075em;margin:18px 0 24px;max-width:900px}
+.hero h1 em{color:var(--red);font-style:italic}
+.hero p{font:15px/1.65 Georgia,serif;color:#514b41;max-width:420px}
+.stats{display:block;border:0!important;padding:0}
+.stat{display:grid;grid-template-columns:64px 1fr;align-items:baseline;gap:12px;padding:12px 0;border:0!important;margin:0!important}
+.stat strong{font:normal 34px Georgia,serif;color:var(--red)}
+.stat span{font:9px 'Courier New',monospace;letter-spacing:.08em;color:var(--text)}
+.layout{display:grid!important;grid-template-columns:205px minmax(0,1fr)!important;min-height:65vh;background:var(--panel)}
+.sidebar{display:flex!important;flex-direction:column;align-items:stretch;padding:26px 18px 35px clamp(18px,5vw,76px);border:0!important;background:#eee7d9;color:var(--text);min-width:0}
+.side-title{font:10px 'Courier New',monospace;letter-spacing:.08em;color:var(--red);margin:0 0 12px}
+.navbtn{display:flex!important;align-items:center;justify-content:space-between;width:100%;min-height:42px;padding:11px 5px;margin:0;border:0!important;border-radius:0!important;background:transparent!important;color:#514b41!important;font:12px Georgia,serif;opacity:1}
+.navbtn .count{color:var(--red)!important;font:10px 'Courier New',monospace}
+.navbtn:hover,.navbtn.active{color:var(--red)!important;background:#e1d6c3!important;font-weight:bold}
+.side-block{border:0!important;border-top:2px solid var(--text)!important;margin-top:32px;padding-top:14px}
+.side-copy,.notice{color:var(--muted);font:11px/1.65 'Courier New',monospace}
+.content{padding:30px clamp(18px,4vw,58px) 72px;min-width:0;background:var(--panel)}
+.toolbar{gap:7px;margin-bottom:32px;padding-bottom:17px;border:0!important}
+.search input,.control,.filter,.status-filter{border:1px solid #b9aa92;border-radius:0;background:#e9e2d3;color:var(--text);font:11px 'Courier New',monospace}
+.search input,.control{padding:12px 13px;height:42px}
+.search input:focus,.control:focus{outline:1px solid var(--red);border-color:var(--red)}
+.view-toggle{border:1px solid var(--text);border-radius:0;height:42px}
+.view-toggle button{border-radius:0;background:transparent;color:var(--text);padding:9px 13px}
+.view-toggle button.active{background:var(--text);color:var(--panel)}
+.section-head{border:0!important;padding-bottom:14px;margin-bottom:24px}
+.section-head h2{font:normal clamp(30px,4vw,47px)/.98 Georgia,serif;letter-spacing:-.055em}
+.section-head p{font:12px 'Courier New',monospace;color:var(--muted)}
+.grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:34px 20px;align-items:start}
+.series-card{min-width:0;position:relative;border:0!important;background:transparent!important;box-shadow:none!important}
+.poster{aspect-ratio:2/3;border:0!important;border-radius:0!important;background-color:#c8b99f;padding:13px;box-shadow:3px 4px 0 #d2c5b1!important}
+.poster:after{inset:6px;border:0!important}
+.poster-title{font:normal clamp(17px,1.8vw,25px)/.94 Georgia,serif;letter-spacing:-.035em;text-transform:none;color:#fff4df;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.poster-num{font:10px 'Courier New',monospace;color:#fff4df}
+.card-meta{padding-top:12px}
+.profile-title-button{font:normal 22px/1.03 Georgia,serif!important;color:var(--text);letter-spacing:-.035em}
+.profile-title-button:hover{color:var(--red)}
+.card-year,.series-extra{font:10px 'Courier New',monospace!important;color:var(--muted)}
+.series-summary{font:12px/1.55 Georgia,serif;color:#5c5549}
+.card-actions,.list-actions{display:flex;gap:5px;align-items:center;flex-wrap:wrap}
+.card-actions{margin-top:9px}
+.status-btn{border:1px solid #b9aa92!important;border-radius:0!important;background:transparent!important;color:var(--text)!important;font:10px 'Courier New',monospace!important;padding:8px 7px!important}
+.status-btn:hover,.status-btn.active,.status-btn.chosen{background:var(--red)!important;border-color:var(--red)!important;color:#fff7e9!important}
+.favorite-btn{color:var(--red)}
+.list-row{display:grid;grid-template-columns:54px minmax(0,1fr) 70px minmax(150px,210px);gap:12px;align-items:center;border:0!important;border-radius:0!important;border-bottom:1px solid var(--line)!important;padding:12px 8px}
+.mini-poster{border-radius:0!important}
+.list-actions{min-width:0}
+.small-btn{border:1px solid var(--text)!important;border-radius:0!important;background:transparent!important;color:var(--text)!important;font:10px 'Courier New',monospace!important;padding:9px 10px!important}
+.small-btn:hover{background:var(--text)!important;color:var(--panel)!important}
+.discover-panel,.stats-panel,.profile-dialog{border-radius:0!important}
+footer{background:var(--bg)}
+@media(min-width:1200px){.grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:38px 22px}}
+@media(max-width:900px){.layout{grid-template-columns:170px minmax(0,1fr)!important}.sidebar{padding-left:18px}.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 15px}.hero{grid-template-columns:minmax(0,1fr) 205px}}
+@media(max-width:760px){
+ header{padding:17px 18px 14px}.wordmark{font-size:24px}.brand{gap:10px}.brand-note{font-size:12px}.header-right{max-width:110px;font-size:9px;text-align:right;line-height:1.5}
+ .hero{padding:54px 18px 25px;grid-template-columns:1fr;gap:24px}.hero:before{left:18px;top:17px;font-size:8px}.hero h1{font-size:clamp(49px,12vw,76px)}.hero p{font-size:14px}
+ .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.stat{display:block;padding:9px 0 0;border:0!important;border-top:1px solid var(--line)!important}.stat strong{display:block;font-size:29px}.stat span{font-size:8px;line-height:1.4}
+ .layout{display:flex!important;flex-direction:column!important}.sidebar{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;padding:14px 18px;border:0!important;border-bottom:1px solid var(--line)!important;gap:0 12px}.sidebar>.side-title{grid-column:1/-1;margin-bottom:6px}.navbtn{min-height:38px;padding:8px 3px}.side-block{grid-column:1/-1;margin-top:17px}
+ .content{padding:24px 18px 48px}.toolbar{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:30px}.search{grid-column:1/-1;min-width:0}.search input{width:100%}.control{width:100%;min-width:0}.view-toggle{justify-self:end}
+ .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 14px}.poster{padding:10px}.poster-title{font-size:18px}.card-actions{flex-wrap:wrap}.status-btn{font-size:9px!important;min-width:0;padding:7px 4px!important}
+ .list-row{grid-template-columns:40px minmax(0,1fr);gap:10px}.list-row>.list-year{display:none}.list-row>div .list-year{display:block}.list-row .list-actions{grid-column:2;grid-row:2}
+}
 </style>
 </head>
 <body>
