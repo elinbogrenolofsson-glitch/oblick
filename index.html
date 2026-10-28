@@ -521,3 +521,27 @@ body .layout > .sidebar > .navbtn.active{
     width:100%!important;
   }
 }
+
+
+/* FIX: restore readable navigation on the light paper catalogue */
+body .layout > .sidebar{background:#eee7d9!important;color:#25251f!important}
+body .layout > .sidebar > .side-title{color:#8e3028!important}
+body .layout > .sidebar > .navbtn{
+  display:flex!important;
+  visibility:visible!important;
+  opacity:1!important;
+  color:#514b41!important;
+  background:transparent!important;
+}
+body .layout > .sidebar > .navbtn .count{color:#8e3028!important}
+body .layout > .sidebar > .navbtn:hover,
+body .layout > .sidebar > .navbtn.active{
+  color:#8e3028!important;
+  background:#e1d6c3!important;
+  border-bottom-color:#a13b2e!important;
+}
+body .layout > .sidebar > .side-block{color:#25251f!important}
+body .layout > .sidebar > .side-block .side-copy{color:#716b5f!important}
+@media(max-width:760px){
+  body .layout > .sidebar{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
