@@ -160,6 +160,101 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{ou
 @media(max-width:760px){header{padding:19px 18px 16px}.hero{grid-template-columns:1fr;padding:35px 18px 28px;gap:24px}.layout{grid-template-columns:1fr}.sidebar{background:#1d1a16;border-right:0;border-bottom:1px solid var(--line);padding:12px 14px;gap:5px}.content{padding:22px 18px 44px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 12px}.poster-title{font-size:clamp(19px,5vw,24px)}}
 @media(max-width:420px){.brand-note{font-size:11px}.wordmark{font-size:20px}.hero h1{font-size:43px}.grid{gap:20px 10px}.card-actions{gap:4px}.status-btn{font-size:9px}}
 
+
+/* Structural art direction: index-like navigation and an editorial lead poster */
+header{display:grid;grid-template-columns:1fr auto;align-items:center}
+.header-right{border-left:1px solid var(--line);padding-left:22px}
+.hero{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,.55fr);min-height:300px;align-items:end;padding-top:50px;padding-bottom:34px}
+.hero:before{content:"SERIES INDEX / PERSONAL COLLECTION";display:block;position:absolute;top:19px;left:clamp(18px,4vw,60px);font:10px Arial,sans-serif;letter-spacing:.18em;color:#9e8c76}
+.hero>div:first-child{padding-top:8px}
+.hero .eyebrow{margin-bottom:13px}
+.hero h1{max-width:700px}
+.hero p{max-width:430px;font-size:13px}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-self:end;border-top:1px solid #55483a;padding-top:17px;gap:14px}
+.stat{padding-left:12px;border-left:1px solid #55483a}
+.stat:first-child{padding-left:0;border-left:0}
+.stat strong{font-size:clamp(25px,2.5vw,35px)}
+.stat span{display:block;line-height:1.5;margin-top:8px}
+.layout{display:block;min-height:0}
+.sidebar{position:relative;display:grid;grid-template-columns:repeat(10,minmax(0,1fr));align-items:stretch;gap:0;padding:0 clamp(18px,4vw,60px);border-right:0;border-bottom:1px solid var(--line);background:#191714}
+.sidebar>.side-title{grid-column:1/-1;margin:0;padding:14px 0 7px;font-size:9px;letter-spacing:.2em}
+.navbtn{display:flex;min-height:48px;align-items:center;justify-content:space-between;gap:8px;margin:0;padding:10px 10px 11px;border-left:0;border-bottom:2px solid transparent;border-top:1px solid transparent;font-size:11px;line-height:1.25}
+.navbtn:hover,.navbtn.active{background:#28221b;border-bottom-color:var(--red2);border-left-color:transparent}
+.count{font-variant-numeric:tabular-nums;font-size:10px}
+.side-block{grid-column:1/-1;display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:0;padding:12px 0;border-top:1px solid #383128}
+.side-block .side-title{margin:0 8px 0 0}
+.side-block .side-copy{margin:0;flex:1;min-width:200px;font-size:11px}
+.side-block .small-btn{margin:0!important;white-space:nowrap}
+.side-block .notice{width:100%;margin-top:2px;font-size:10px}
+.content{padding:29px clamp(18px,4vw,60px) 70px}
+.toolbar{display:grid;grid-template-columns:minmax(200px,1fr) auto auto auto;align-items:center;margin-bottom:33px}
+.search{min-width:0}
+.search input{height:43px}
+.control{height:43px}
+.view-toggle{height:43px;display:flex;align-items:stretch}
+.section-head{align-items:end;padding-bottom:17px;margin-bottom:23px}
+.section-head h2{font-size:clamp(32px,3.8vw,48px);line-height:1}
+.section-head p{max-width:460px;line-height:1.6}
+.results-label{font:10px Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase}
+.grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:30px 17px;align-items:start}
+.series-card{position:relative}
+.poster{aspect-ratio:2/3;padding:13px;border-color:#554535;background-color:#30271f}
+.poster:after{content:"";position:absolute;inset:7px;border:1px solid rgba(244,224,194,.14);pointer-events:none}
+.poster-title{max-width:95%;font-size:clamp(17px,1.6vw,24px);text-transform:uppercase;line-height:.98;letter-spacing:-.035em}
+.poster-num{z-index:1;position:absolute;top:12px;left:13px;font-size:9px;letter-spacing:.15em}
+.series-card:first-child{grid-column:span 2;display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1fr);gap:18px;align-items:center;padding:14px;background:#211e19;border:1px solid #4a3d30}
+.series-card:first-child .poster{aspect-ratio:2/3;min-height:285px}
+.series-card:first-child .poster-title{font-size:clamp(22px,2.3vw,34px)}
+.series-card:first-child .card-meta{padding:10px 4px 10px 0}
+.series-card:first-child .profile-title-button{font:normal clamp(22px,2.4vw,31px)/1.06 var(--serif);text-align:left}
+.series-card:first-child .card-year{margin-top:9px;font-size:10px}
+.series-card:first-child .series-summary{font-size:12px;line-height:1.7}
+.card-topline{align-items:flex-start}
+.profile-title-button{background:none;border:0;padding:0;text-align:left;cursor:pointer}
+.profile-title-button:hover{color:var(--red2)}
+.card-meta{padding-top:12px}
+.series-extra{font-size:9px;letter-spacing:.045em;line-height:1.7}
+.series-summary{font-size:11px;line-height:1.6}
+.card-actions{display:flex;flex-wrap:wrap}
+.status-btn{flex:1;min-width:62px}
+.list-row{display:grid;grid-template-columns:54px minmax(0,1fr) auto;align-items:center;gap:15px;padding:12px 10px}
+.mini-poster{width:48px;height:67px}
+.profile-dialog{max-width:900px}
+@media(max-width:1050px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}.sidebar{grid-template-columns:repeat(5,minmax(0,1fr))}.navbtn{font-size:10px}.series-card:first-child{grid-column:span 2}}
+@media(max-width:760px){
+ header{display:flex;padding:18px}.header-right{padding-left:12px;font-size:9px}
+ .hero{grid-template-columns:1fr;min-height:0;padding:51px 18px 25px;gap:27px}
+ .hero:before{left:18px;top:17px;font-size:8px}
+ .hero h1{font-size:clamp(43px,10vw,66px)}
+ .stats{gap:8px}.stat{padding-left:8px}.stat span{font-size:8px;letter-spacing:.06em}
+ .sidebar{grid-template-columns:repeat(2,minmax(0,1fr));padding:0 18px}
+ .sidebar>.side-title{grid-column:1/-1}
+ .navbtn{min-height:40px;padding:9px 8px;border-bottom:1px solid #383128;font-size:11px}
+ .side-block{grid-column:1/-1}
+ .content{padding:23px 18px 50px}
+ .toolbar{grid-template-columns:1fr 1fr;gap:8px;margin-bottom:27px}
+ .search{grid-column:1/-1}
+ .search input{height:42px}
+ .control{height:42px;min-width:0;width:100%}
+ .view-toggle{height:42px;justify-self:end}
+ .grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 12px}
+ .series-card:first-child{grid-column:1/-1;grid-template-columns:minmax(0,.75fr) minmax(0,1fr);gap:14px;padding:10px}
+ .series-card:first-child .poster{min-height:240px}
+ .series-card:first-child .profile-title-button{font-size:23px}
+}
+@media(max-width:480px){
+ .header-right{max-width:115px;line-height:1.5;text-align:right}
+ .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 12px}
+ .series-card:first-child{grid-column:1/-1;grid-template-columns:minmax(0,.82fr) minmax(0,1fr);gap:12px}
+ .series-card:first-child .poster{min-height:220px}
+ .series-card:first-child .poster-title{font-size:23px}
+ .series-card:first-child .profile-title-button{font-size:20px}
+ .series-card:first-child .series-summary{font-size:10px}
+ .status-btn{font-size:9px;min-width:0;padding:7px 3px}
+ .card-actions{gap:4px}
+ .side-block .side-copy{min-width:100%}
+}
+
 </style>
 </head>
 <body>
