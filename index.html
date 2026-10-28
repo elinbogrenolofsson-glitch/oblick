@@ -34,7 +34,7 @@ const $=id=>document.getElementById(id);
 const statusName=s=>s==="done"?"Sett klart":s==="started"?"Påbörjat":"";
 function save(){try{localStorage.setItem(KEY,JSON.stringify(statuses))}catch(e){alert("Kunde inte spara i webbläsaren.")}}
 function saveReviewed(){try{localStorage.setItem(REVIEW_KEY,JSON.stringify(reviewed))}catch(e){}}
-function stripHtml(s){const d=document.createElement("div");d.innerHTML=s||"";return (d.textContent||d.innerText||"").replace(/\\s+/g," ").trim()}
+function stripHtml(s){const d=document.createElement("div");d.innerHTML=s||"";return (d.textContent||d.innerText||"").replace(/\s+/g," ").trim()}
 async function ensureMeta(s){if(metadata[s.title]||pendingMeta[s.title])return pendingMeta[s.title];pendingMeta[s.title]=(async()=>{try{const r=await fetch("https://api.tvmaze.com/search/shows?q="+encodeURIComponent(s.title));if(!r.ok)return null;const results=await r.json();const exact=results.find(x=>x.show&&x.show.name.toLowerCase()===s.title.toLowerCase())||results[0];if(!exact||!exact.show)return null;const sh=exact.show;let seasons=null;try{const sr=await fetch("https://api.tvmaze.com/shows/"+sh.id+"/seasons");if(sr.ok){const ss=await sr.json();seasons=Array.isArray(ss)?ss.length:null}}catch(e){}metadata[s.title]={image:sh.image&&(sh.image.original||sh.image.medium)||"",genres:sh.genres||[],summary:stripHtml(sh.summary),premiered:sh.premiered||"",status:sh.status||"",seasons};try{localStorage.setItem(META_KEY,JSON.stringify(metadata))}catch(e){}if(view==="discover")renderSwipe();else render();return metadata[s.title]}catch(e){return null}finally{delete pendingMeta[s.title]}})();return pendingMeta[s.title]}
 function safe(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
 function filtered(){
@@ -62,9 +62,9 @@ function render(){
  document.querySelectorAll(".navbtn").forEach(b=>b.classList.toggle("active",b.dataset.view===view));
  const titles={all:["Alla serier","En katalog över dina berättelser."],started:["Påbörjat","Serier du har börjat följa."],done:["Sett klart","Avslutade säsonger och berättelser."],mine:["Min lista","Din personliga överblick över markerade serier."],discover:["Upptäck","Hitta nästa serie utan att behöva leta."]};
  $("viewTitle").textContent=titles[view][0];$("viewSub").textContent=titles[view][1];
- const arr=filtered();if(view!=="discover")arr.slice(0,24).forEach(s=>{if(!metadata[s.title])ensureMeta(s)});$("resultCount").textContent=arr.length+" "+(arr.length===1?"titel":"titlar");
+ const arr=filtered();if(view!=="discover")arr.slice(0,12).forEach(s=>{if(!metadata[s.title])ensureMeta(s)});$("resultCount").textContent=arr.length+" "+(arr.length===1?"titel":"titlar");
  $("results").className=mode==="grid"?"grid":"list";$("results").innerHTML=arr.map((s,i)=>mode==="grid"?card(s,i):row(s,i)).join("");
- $("empty").classList.toggle("hidden",arr.length>0);$("results").classList.toggle("hidden",arr.length===0);
+ $("empty").classList.toggle("hidden",view==="discover"||arr.length>0);$("results").classList.toggle("hidden",view==="discover"||arr.length===0);
  $("gridBtn").classList.toggle("active",mode==="grid");$("listBtn").classList.toggle("active",mode==="list");
 }
 document.addEventListener("click",e=>{let b=e.target.closest("[data-status]");if(b){let t=b.dataset.title,s=b.dataset.status;if(statuses[t]===s)delete statuses[t];else statuses[t]=s;save();render();}});
