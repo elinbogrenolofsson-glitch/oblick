@@ -340,6 +340,34 @@ footer{background:var(--bg)}
 }
 @media(prefers-reduced-motion:no-preference){.series-card{transition:transform .18s ease}.series-card:hover{transform:translateY(-3px)}}
 
+
+/* Remove decorative hairlines; keep layout defined by spacing and typography */
+.topline{height:4px}
+header,.hero,.sidebar,.toolbar,.section-head,.side-block,.navbtn,.navbtn:last-of-type,
+.stats,.stat,.view-toggle,.list-row{border:0!important;box-shadow:none}
+.hero{position:relative}
+.hero:before{letter-spacing:.06em}
+.stats{gap:0}
+.stat{padding:10px 0}
+.stat+ .stat{margin-top:4px}
+.sidebar{box-shadow:none}
+.navbtn{padding:11px 5px}
+.navbtn:hover,.navbtn.active{background:#e1d6c3!important;border-radius:2px}
+.toolbar{padding-bottom:0}
+.section-head{margin-bottom:24px}
+.poster{border:0;box-shadow:3px 4px 0 #d2c5b1}
+.poster:after{border:0!important}
+.series-card{border:0!important}
+.status-btn{border:0!important;border-radius:2px!important;background:#e1d6c3!important}
+.status-btn:hover,.status-btn.active{background:var(--red)!important}
+.small-btn{border:0!important;border-radius:2px!important;background:#e1d6c3!important}
+.small-btn:hover{background:var(--text)!important}
+@media(max-width:650px){
+ .navbtn{border:0!important}
+ .stat{border:0!important}
+ .toolbar{border:0!important}
+}
+
 </style>
 </head>
 <body>
