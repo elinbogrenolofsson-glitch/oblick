@@ -256,253 +256,15 @@ header{display:grid;grid-template-columns:1fr auto;align-items:center}
 
 
 
-/* OBLICK / paper catalogue art direction — a new visual system, not a palette tweak */
-:root{
- --bg:#e9e2d3;--panel:#f4eee2;--panel2:#ddd2bf;--line:#b9aa92;
- --text:#25251f;--muted:#716b5f;--red:#8e3028;--red2:#a13b2e;
- --serif:Georgia,'Times New Roman',serif;
- --sans:Arial,Helvetica,sans-serif;
-}
-html{background:#e9e2d3}
-body{background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;font-size:14px}
-.topline{height:8px;background:var(--red)}
-header{padding:22px clamp(18px,5vw,76px) 17px;border-bottom:2px solid var(--text);background:var(--bg)}
-.brand{gap:18px;align-items:center}
-.wordmark{font-family:Georgia,serif;font-size:29px;letter-spacing:.12em;font-weight:700}
-.wordmark span{color:var(--red)}
-.brand-note{font:italic 14px Georgia,serif;color:var(--muted)}
-.header-right{font:10px 'Courier New',monospace;letter-spacing:.09em;color:var(--text);text-transform:uppercase}
-.hero{padding:clamp(32px,5vw,68px) clamp(18px,5vw,76px) 38px;grid-template-columns:minmax(0,1fr) 240px;gap:40px;background:#e1d6c3;border-bottom:1px solid var(--text);align-items:end}
-.hero:before{content:"OB / 001     •     LESEARKIV FÖR RÖRLIGA BILDER";position:absolute;top:18px;left:clamp(18px,5vw,76px);font:10px 'Courier New',monospace;letter-spacing:.04em;color:var(--red)}
-.hero .eyebrow{color:var(--red);font:10px 'Courier New',monospace;letter-spacing:.12em;font-weight:normal}
-.hero h1{font:normal clamp(48px,8.4vw,116px)/.82 Georgia,'Times New Roman',serif;letter-spacing:-.075em;margin:18px 0 24px;max-width:900px}
-.hero h1 em{color:var(--red);font-style:italic}
-.hero p{font:15px/1.65 Georgia,serif;color:#514b41;max-width:420px}
-.stats{display:block;border-top:2px solid var(--text);padding-top:0;gap:0}
-.stat{display:grid;grid-template-columns:64px 1fr;align-items:baseline;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
-.stat strong{font:normal 34px Georgia,serif;color:var(--red)}
-.stat span{font:9px 'Courier New',monospace;letter-spacing:.08em;color:var(--text)}
-.layout{display:grid;grid-template-columns:205px minmax(0,1fr);background:var(--panel);min-height:65vh}
-.sidebar{padding:26px 18px 35px clamp(18px,5vw,76px);border-right:1px solid var(--line);background:#eee7d9}
-.side-title{font:10px 'Courier New',monospace;letter-spacing:.08em;color:var(--red);margin:0 0 12px}
-.navbtn{font:12px Georgia,serif;color:#514b41;border:0;border-top:1px solid #d0c4b0;border-left:0;padding:12px 5px;margin:0;border-radius:0;background:transparent}
-.navbtn:last-of-type{border-bottom:1px solid #d0c4b0}
-.navbtn:hover,.navbtn.active{background:transparent;color:var(--red);border-left:0;border-top-color:var(--red);font-weight:bold}
-.count{font:10px 'Courier New',monospace;color:var(--red)}
-.side-block{border-top:2px solid var(--text);margin-top:32px;padding-top:14px}
-.side-copy,.notice{color:var(--muted);font:11px/1.65 'Courier New',monospace}
-.small-btn{border:1px solid var(--text)!important;border-radius:0!important;background:transparent!important;color:var(--text)!important;font:10px 'Courier New',monospace!important;padding:9px 10px!important}
-.small-btn:hover{background:var(--text)!important;color:var(--panel)!important}
-.content{padding:30px clamp(18px,4vw,58px) 72px;min-width:0}
-.toolbar{gap:7px;margin-bottom:42px;padding-bottom:17px;border-bottom:1px solid var(--line)}
-.search input,.control{border:1px solid #b9aa92;border-radius:0;background:#e9e2d3;color:var(--text);padding:12px 13px;font:11px 'Courier New',monospace;height:42px}
-.search input:focus,.control:focus{outline:1px solid var(--red);border-color:var(--red)}
-.view-toggle{border:1px solid var(--text);border-radius:0;height:42px}
-.view-toggle button{border-radius:0;background:transparent;color:var(--text);padding:9px 13px}
-.view-toggle button.active{background:var(--text);color:var(--panel)}
-.section-head{border-bottom:2px solid var(--text);padding-bottom:14px;margin-bottom:24px}
-.section-head h2{font:normal clamp(30px,4vw,47px)/.95 Georgia,serif;letter-spacing:-.055em}
-.section-head p{font:12px 'Courier New',monospace;color:var(--muted)}
-.results-label{font:10px 'Courier New',monospace;color:var(--red);letter-spacing:.05em}
-.grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:35px 20px;align-items:start}
-.series-card{min-width:0;position:relative}
-.poster{aspect-ratio:2/3;border:1px solid #b5a58e;border-radius:0;background-color:#c8b99f;padding:13px;box-shadow:4px 4px 0 #d2c5b1}
-.poster:after{inset:6px;border:1px solid rgba(245,237,220,.5)}
-.poster-title{font:normal clamp(17px,1.8vw,25px)/.94 Georgia,serif;letter-spacing:-.035em;text-transform:none;color:#fff4df;text-shadow:0 1px 8px rgba(0,0,0,.4)}
-.poster-num{font:10px 'Courier New',monospace;color:#fff4df;letter-spacing:.06em}
-.card-meta{padding-top:12px}
-.profile-title-button{font:normal 22px/1.03 Georgia,serif!important;color:var(--text);letter-spacing:-.035em}
-.profile-title-button:hover{color:var(--red)}
-.card-year,.series-extra{font:10px 'Courier New',monospace!important;color:var(--muted)}
-.series-summary{font:12px/1.55 Georgia,serif;color:#5c5549}
-.card-topline{align-items:flex-start}
-.card-actions{gap:5px;margin-top:9px}
-.status-btn{border:1px solid #b9aa92!important;border-radius:0!important;background:transparent!important;color:var(--text)!important;font:10px 'Courier New',monospace!important;padding:8px 5px!important}
-.status-btn:hover,.status-btn.active,.status-btn.chosen{background:var(--red)!important;border-color:var(--red)!important;color:#fff7e9!important}
-.series-card:first-child{grid-column:auto;display:block;padding:0;background:transparent;border:0}
-.series-card:first-child .poster{min-height:0;aspect-ratio:2/3}
-.series-card:first-child .poster-title{font-size:clamp(17px,1.8vw,25px)}
-.series-card:first-child .profile-title-button{font:normal 22px/1.03 Georgia,serif!important}
-.series-card:first-child .card-meta{padding:12px 0 0}
-.list-row{border-bottom:1px solid var(--line);padding:12px 8px;border-radius:0}
-.mini-poster{border-radius:0}
-.discover-panel,.stats-panel,.profile-dialog{border-radius:0!important}
-footer{background:var(--bg)}
-@media(min-width:1200px){.grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:39px 22px}.series-card:first-child{grid-column:auto}}
-@media(max-width:900px){.layout{grid-template-columns:170px minmax(0,1fr)}.sidebar{padding-left:18px}.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 15px}.hero{grid-template-columns:minmax(0,1fr) 205px}}
-@media(max-width:650px){
- header{padding:17px 18px 14px}.wordmark{font-size:24px}.brand{gap:10px}.brand-note{font-size:12px}.header-right{max-width:110px;font-size:9px;text-align:right;line-height:1.5}
- .hero{padding:54px 18px 25px;grid-template-columns:1fr;gap:24px}.hero:before{left:18px;top:17px;font-size:8px}.hero h1{font-size:clamp(49px,12vw,76px)}.hero p{font-size:14px}
- .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.stat{display:block;padding:9px 0 0;border-bottom:0;border-top:1px solid var(--line)}.stat strong{display:block;font-size:29px}.stat span{font-size:8px;line-height:1.4}
- .layout{display:flex;flex-direction:column}.sidebar{padding:14px 18px;border-right:0;border-bottom:1px solid var(--text);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 12px}.sidebar>.side-title{grid-column:1/-1;margin-bottom:6px}.navbtn{min-height:38px;padding:8px 3px}.side-block{grid-column:1/-1;margin-top:17px}
- .content{padding:24px 18px 48px}.toolbar{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:30px}.search{grid-column:1/-1;min-width:0}.search input{width:100%}.control{width:100%;min-width:0}.view-toggle{justify-self:end}
- .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 14px}.poster{padding:10px}.poster-title{font-size:18px}.card-actions{flex-wrap:wrap}.status-btn{font-size:9px!important}
-}
-@media(prefers-reduced-motion:no-preference){.series-card{transition:transform .18s ease}.series-card:hover{transform:translateY(-3px)}}
-
-
-/* Remove decorative hairlines; keep layout defined by spacing and typography */
-.topline{height:4px}
-header,.hero,.sidebar,.toolbar,.section-head,.side-block,.navbtn,.navbtn:last-of-type,
-.stats,.stat,.view-toggle,.list-row{border:0!important;box-shadow:none}
-.hero{position:relative}
-.hero:before{letter-spacing:.06em}
-.stats{gap:0}
-.stat{padding:10px 0}
-.stat+ .stat{margin-top:4px}
-.sidebar{box-shadow:none}
-.navbtn{padding:11px 5px}
-.navbtn:hover,.navbtn.active{background:#e1d6c3!important;border-radius:2px}
-.toolbar{padding-bottom:0}
-.section-head{margin-bottom:24px}
-.poster{border:0;box-shadow:3px 4px 0 #d2c5b1}
-.poster:after{border:0!important}
-.series-card{border:0!important}
-.status-btn{border:0!important;border-radius:2px!important;background:#e1d6c3!important}
-.status-btn:hover,.status-btn.active,.status-btn.chosen{background:var(--red)!important}
-.small-btn{border:0!important;border-radius:2px!important;background:#e1d6c3!important}
-.small-btn:hover{background:var(--text)!important}
-@media(max-width:650px){
- .navbtn{border:0!important}
- .stat{border:0!important}
- .toolbar{border:0!important}
-}
-
-
-/* Restore clear contrast for archive navigation and list controls on paper background */
-.sidebar,.sidebar .side-title,.sidebar .side-copy{color:var(--text)}
-.navbtn{color:var(--text)!important;background:transparent!important;border:0!important;border-radius:2px!important;opacity:1}
-.navbtn .count{color:var(--muted)!important}
-.navbtn:hover,.navbtn.active{color:var(--red)!important;background:#e1d6c3!important}
-.control,.search,.filter,.status-filter{color:var(--text)}
-#statsPanel{color:var(--text)}
-
-
-
-/* NAVIGATION FIX: keep archive menu visible on desktop and mobile */
-/* FIX: keep the full archive navigation visible */
-body .layout > .sidebar{
-  display:grid!important;
-  visibility:visible!important;
-  opacity:1!important;
-  height:auto!important;
-  max-height:none!important;
-  overflow:visible!important;
-  position:relative!important;
-  z-index:2!important;
-}
-body .layout > .sidebar > .navbtn{
-  display:flex!important;
-  visibility:visible!important;
-  opacity:1!important;
-  color:#eee5d6!important;
-}
-body .layout > .sidebar > .navbtn:hover,
-body .layout > .sidebar > .navbtn.active{
-  color:#fff0dc!important;
-}
+/* Final layout safeguards: keep the archive grid and list view predictable. */
+.list-row{grid-template-columns:54px minmax(0,1fr) 70px minmax(150px,210px)}
+.list-actions{min-width:0}
 @media(max-width:760px){
-  body .layout > .sidebar{
-    grid-template-columns:repeat(2,minmax(0,1fr))!important;
-    padding:0 18px!important;
-  }
-  body .layout > .sidebar > .navbtn{
-    min-height:42px!important;
-    width:100%!important;
-  }
+ .list-row{grid-template-columns:40px minmax(0,1fr) 100px;gap:10px}
+ .list-row .list-actions{grid-column:2/4;grid-row:2}
+ .list-row > .list-year{display:none}
+ .list-row div .list-year{display:block}
 }
-
-
-/* FIX: restore readable navigation on the light paper catalogue */
-body .layout > .sidebar{background:#eee7d9!important;color:#25251f!important}
-body .layout > .sidebar > .side-title{color:#8e3028!important}
-body .layout > .sidebar > .navbtn{
-  display:flex!important;
-  visibility:visible!important;
-  opacity:1!important;
-  color:#514b41!important;
-  background:transparent!important;
-}
-body .layout > .sidebar > .navbtn .count{color:#8e3028!important}
-body .layout > .sidebar > .navbtn:hover,
-body .layout > .sidebar > .navbtn.active{
-  color:#8e3028!important;
-  background:#e1d6c3!important;
-  border-bottom-color:#a13b2e!important;
-}
-body .layout > .sidebar > .side-block{color:#25251f!important}
-body .layout > .sidebar > .side-block .side-copy{color:#716b5f!important}
-@media(max-width:760px){
-  body .layout > .sidebar{grid-template-columns:repeat(2,minmax(0,1fr))!important}
-}
-
-
-/* NAV RECOVERY: force every archive category to occupy visible space */
-body .layout{
-  display:grid!important;
-  grid-template-columns:205px minmax(0,1fr)!important;
-  align-items:start!important;
-}
-body .layout > aside.sidebar{
-  display:flex!important;
-  flex-direction:column!important;
-  align-items:stretch!important;
-  gap:0!important;
-  min-width:0!important;
-  width:auto!important;
-  height:auto!important;
-  max-height:none!important;
-  overflow:visible!important;
-  padding:22px 16px!important;
-  background:#eee7d9!important;
-  border-right:1px solid #b9aa92!important;
-}
-body .layout > aside.sidebar > .side-title{
-  display:block!important;
-  visibility:visible!important;
-  color:#8e3028!important;
-  margin:0 0 12px!important;
-}
-body .layout > aside.sidebar > button.navbtn{
-  display:flex!important;
-  flex:0 0 auto!important;
-  position:relative!important;
-  width:100%!important;
-  min-height:42px!important;
-  height:auto!important;
-  max-height:none!important;
-  overflow:visible!important;
-  visibility:visible!important;
-  opacity:1!important;
-  align-items:center!important;
-  justify-content:space-between!important;
-  color:#514b41!important;
-  background:transparent!important;
-  text-align:left!important;
-  white-space:normal!important;
-  padding:11px 8px!important;
-  border-bottom:1px solid #d0c4b0!important;
-}
-body .layout > aside.sidebar > button.navbtn:hover,
-body .layout > aside.sidebar > button.navbtn.active{
-  color:#8e3028!important;
-  background:#e1d6c3!important;
-}
-@media(max-width:760px){
-  body .layout{display:flex!important;flex-direction:column!important}
-  body .layout > aside.sidebar{
-    display:grid!important;
-    grid-template-columns:repeat(2,minmax(0,1fr))!important;
-    width:100%!important;
-    padding:14px 18px!important;
-    border-right:0!important;
-    border-bottom:1px solid #b9aa92!important;
-    gap:0 12px!important;
-  }
-  body .layout > aside.sidebar > .side-title{grid-column:1/-1!important}
-  body .layout > aside.sidebar > button.navbtn{width:100%!important;min-height:42px!important}
-}
-
 </style>
 </head>
 <body>
@@ -580,7 +342,7 @@ function filtered(){
 }
 function actions(s,compact=false){return '<div class="'+(compact?"list-actions":"card-actions")+'"><button class="status-btn '+(statuses[s.title]==="started"?"chosen":"") +'" aria-pressed="'+(statuses[s.title]==="started") +'" data-title="'+safe(s.title)+'" data-status="started">Påbörjat</button><button class="status-btn '+(statuses[s.title]==="done"?"chosen":"") +'" aria-pressed="'+(statuses[s.title]==="done") +'" data-title="'+safe(s.title)+'" data-status="done">Sett klart</button>'+(compact?'<button class="favorite-btn '+(favorites[s.title]?"active":"") +'" title="Favorit" aria-label="Favorit: '+safe(s.title)+'" aria-pressed="'+!!favorites[s.title]+'" data-favorite="'+safe(s.title)+'">'+(favorites[s.title]?"♥":"♡")+'</button>':'')+'</div>'}
 function posterStyle(s,i){const m=metadata[s.title];return m&&m.image?`background-image:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.9) 100%),url(&quot;${safe(m.image)}&quot;)`:`background-image:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.88) 100%),linear-gradient(145deg,hsl(${i*37%360} 35% 28%),#151515 70%)`}
-function extraMeta(s){const m=metadata[s.title];if(!m)return "";return `<div class="series-extra">${m.genres.slice(0,3).map(safe).join(" · ")}${m.seasons?` · ${m.seasons} säsonger`:""}</div>${m.summary?`<p class="series-summary">${safe(m.summary.slice(0,135))}${m.summary.length>135?"…":""}</p>`:""}`}
+function extraMeta(s){const m=metadata[s.title];if(!m)return "";const genres=Array.isArray(m.genres)?m.genres:[];return `${genres.length?`<div class="series-extra">${genres.slice(0,3).map(safe).join(" · ")}${m.seasons?` · ${m.seasons} säsonger`:""}</div>`:""}${m.summary?`<p class="series-summary">${safe(m.summary.slice(0,135))}${m.summary.length>135?"…":""}</p>`:""} `}
 function card(s,i){let initials=s.title.split(" ").slice(0,2).join(" ");return '<article class="series-card"><div class="poster" style="'+posterStyle(s,i)+'"><span class="poster-num">'+String(i+1).padStart(2,"0")+'</span><div class="poster-title">'+safe(initials)+'</div></div><div class="card-meta"><div class="card-topline"><button class="profile-title-button" data-profile="'+safe(s.title)+'">'+safe(s.title)+'</button><button class="favorite-btn '+(favorites[s.title]?"active":"") +'" title="Favorit" data-favorite="'+safe(s.title)+'">'+(favorites[s.title]?"♥":"♡")+'</button></div><div class="card-year">'+(s.year||"Årtal saknas")+(statuses[s.title]?' · '+statusName(statuses[s.title]):'')+'</div>'+extraMeta(s)+actions(s)+'</div></article>'}
 function row(s,i){return '<article class="list-row"><div class="mini-poster" style="'+(metadata[s.title]&&metadata[s.title].image?'background-image:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.65)),url(&quot;'+safe(metadata[s.title].image)+'&quot;);background-size:cover;background-position:center;color:white;text-shadow:0 1px 4px #000':'')+'">'+(metadata[s.title]&&metadata[s.title].image?'':safe(s.title.split(" ").slice(0,2).join(" ")))+'</div><div><button class="profile-title-button list-name" data-profile="'+safe(s.title)+'">'+safe(s.title)+'</button><div class="list-year">'+(s.year||"Årtal saknas")+(statuses[s.title]?' · '+statusName(statuses[s.title]):' · Ej markerad')+'</div></div><div class="list-year">'+(s.year||"—")+'</div>'+actions(s,true)+'</article>'}
 function currentDiscover(){const genre=$("discoverGenre")?$("discoverGenre").value:"";let candidates=SERIES.filter(s=>!reviewed[s.title]&&(!genre||(metadata[s.title]&&metadata[s.title].genres&&metadata[s.title].genres.includes(genre))));if(!candidates.length&&genre){return null}if(discoverChoice&&candidates.some(s=>s.title===discoverChoice))return candidates.find(s=>s.title===discoverChoice);return candidates[0]||null}
@@ -601,7 +363,7 @@ function render(){
 }
 function renderDiary(){if(!diary.length)return `<div class="empty"><strong>Din tittdagbok börjar här.</strong>Markera en serie som påbörjad eller avslutad för att skapa en historik.</div>`;return `<div class="list">${diary.map(d=>`<div class="list-row" style="grid-template-columns:110px minmax(0,1fr)"><div class="list-year">${safe(d.date)}</div><div><strong>${safe(d.title)}</strong><div class="list-year">${safe(d.event)}</div></div></div>`).join("")}</div>`}
 function renderStats(){const done=SERIES.filter(s=>statuses[s.title]==="done").length,started=SERIES.filter(s=>statuses[s.title]==="started").length,unseen=SERIES.length-done-started,fav=Object.values(favorites).filter(Boolean).length;const genreCounts={};SERIES.forEach(s=>(metadata[s.title]?.genres||[]).forEach(g=>genreCounts[g]=(genreCounts[g]||0)+1));const genres=Object.entries(genreCounts).sort((a,b)=>b[1]-a[1]).slice(0,7);$("statsContent").innerHTML=`<div class="stats-dashboard"><div class="stat-tile"><strong>${SERIES.length}</strong><span>Serier i katalogen</span></div><div class="stat-tile"><strong>${done}</strong><span>Sett klart</span></div><div class="stat-tile"><strong>${started}</strong><span>Påbörjade</span></div><div class="stat-tile"><strong>${unseen}</strong><span>Ej markerade</span></div><div class="stat-tile"><strong>${fav}</strong><span>Favoriter</span></div><div class="stat-tile"><strong>${SERIES.length?Math.round(done/SERIES.length*100):0}%</strong><span>Av katalogen klar</span></div></div><h3 style="font:normal 26px var(--serif)">Din fördelning</h3><div class="bar-row"><span>Sett klart</span><div class="bar-track"><div class="bar-fill" style="width:${done/SERIES.length*100}%"></div></div><span>${done}</span></div><div class="bar-row"><span>Påbörjat</span><div class="bar-track"><div class="bar-fill" style="width:${started/SERIES.length*100}%"></div></div><span>${started}</span></div><div class="bar-row"><span>Ej markerade</span><div class="bar-track"><div class="bar-fill" style="width:${unseen/SERIES.length*100}%"></div></div><span>${unseen}</span></div><h3 style="font:normal 26px var(--serif);margin-top:32px">Vanliga genrer i katalogen</h3><p class="side-copy">Genrer visas när serieinformationen har hämtats.</p>${genres.map(([g,n])=>`<div class="bar-row"><span>${safe(g)}</span><div class="bar-track"><div class="bar-fill" style="width:${n/(genres[0]?.[1]||1)*100}%"></div></div><span>${n}</span></div>`).join("")||""}`}
-function openProfile(title){const s=SERIES.find(x=>x.title===title);if(!s)return;const m=metadata[title]||{};const mine=personalFor(title);$("profileContent").innerHTML=`<div class="profile-layout"><div class="profile-poster" style="${posterStyle(s,SERIES.indexOf(s))}"></div><div class="profile-text"><div class="eyebrow">Serieprofil · ${s.year||"Årtal saknas"}</div><h2 id="profileTitle">${safe(s.title)}</h2><div class="discover-tags">${safe((m.genres||[]).join(" · ")||"Hämtar genrer…")}${m.seasons?" · "+m.seasons+" säsonger":""}${m.status?" · "+safe(m.status):""}</div><p>${safe(m.summary||"Ingen sammanfattning tillgänglig ännu.")}</p><div class="current-status">Din status: ${statusName(statuses[title])||"Inte markerad"}</div><div class="personal-fields"><label>Betyg (1–10)<input id="profileRating" class="control" type="number" min="0" max="10" value="${Number(mine.rating)||0}" style="width:100%;margin:6px 0 12px"></label><label>Personliga anteckningar<textarea id="profileNotes" class="control" rows="3" style="width:100%;margin:6px 0 12px;resize:vertical" placeholder="Vad tyckte du?">${safe(mine.notes||"")}</textarea></label><label style="display:block;margin:8px 0"><input id="profileNext" type="checkbox" ${mine.next?"checked":""}> Lägg i ”Att se härnäst”</label><label style="display:block;margin:8px 0"><input id="profileWatch" type="checkbox" ${mine.seasonWatch?"checked":""}> Bevaka nästa säsong</label><label>Bevakningsnotering<input id="profileSeasonNote" class="control" style="width:100%;margin:6px 0 12px" value="${safe(mine.seasonNote||"")}" placeholder="T.ex. väntar på säsong 3"></label><button class="small-btn" id="savePersonalBtn">Spara personliga uppgifter</button></div><div class="card-actions"><button class="status-btn ${statuses[title]==="started"?"chosen":""}" data-title="${safe(title)}" data-status="started">Påbörjat</button><button class="status-btn ${statuses[title]==="done"?"chosen":""}" data-title="${safe(title)}" data-status="done">Sett klart</button><button class="favorite-btn ${favorites[title]?"active":""}" data-favorite="${safe(title)}">${favorites[title]?"♥ Favorit":"♡ Favorit"}</button></div></div></div>`;$("profileModal").classList.remove("hidden");if(!m.image)ensureMeta(s)}
+function openProfile(title){const s=SERIES.find(x=>x.title===title);if(!s)return;const m=metadata[title]||{};const mine=personalFor(title);$("profileContent").innerHTML=`<div class="profile-layout"><div class="profile-poster" style="${posterStyle(s,SERIES.indexOf(s))}"></div><div class="profile-text"><div class="eyebrow">Serieprofil · ${s.year||"Årtal saknas"}</div><h2 id="profileTitle">${safe(s.title)}</h2><div class="discover-tags">${safe((m.genres||[]).join(" · ")||"Hämtar genrer…")}${m.seasons?" · "+m.seasons+" säsonger":""}${m.status?" · "+safe(m.status):""}</div><p>${safe(m.summary||"Ingen sammanfattning tillgänglig ännu.")}</p><div class="current-status">Din status: ${statusName(statuses[title])||"Inte markerad"}</div><div class="personal-fields"><label>Betyg (1–10)<input id="profileRating" class="control" type="number" min="0" max="10" value="${Number(mine.rating)||0}" style="width:100%;margin:6px 0 12px"></label><label>Personliga anteckningar<textarea id="profileNotes" class="control" rows="3" style="width:100%;margin:6px 0 12px;resize:vertical" placeholder="Vad tyckte du?">${safe(mine.notes||"")}</textarea></label><label style="display:block;margin:8px 0"><input id="profileNext" type="checkbox" ${mine.next?"checked":""}> Lägg i ”Att se härnäst”</label><label style="display:block;margin:8px 0"><input id="profileWatch" type="checkbox" ${mine.seasonWatch?"checked":""}> Bevaka nästa säsong</label><label>Bevakningsnotering<input id="profileSeasonNote" class="control" style="width:100%;margin:6px 0 12px" value="${safe(mine.seasonNote||"")}" placeholder="T.ex. väntar på säsong 3"></label><button class="small-btn" id="savePersonalBtn">Spara personliga uppgifter</button></div><div class="card-actions"><button class="status-btn ${statuses[title]==="started"?"chosen":""}" aria-pressed="${statuses[title]==="started"}" data-title="${safe(title)}" data-status="started">Påbörjat</button><button class="status-btn ${statuses[title]==="done"?"chosen":""}" aria-pressed="${statuses[title]==="done"}" data-title="${safe(title)}" data-status="done">Sett klart</button><button class="favorite-btn ${favorites[title]?"active":""}" data-favorite="${safe(title)}">${favorites[title]?"♥ Favorit":"♡ Favorit"}</button></div></div></div>`;$("profileModal").classList.remove("hidden");if(!m.image)ensureMeta(s)}
 function setSeriesStatus(title,status){
  if(!title||!status)return;
  if(statuses[title]===status)delete statuses[title];else statuses[title]=status;
