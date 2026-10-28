@@ -256,253 +256,15 @@ header{display:grid;grid-template-columns:1fr auto;align-items:center}
 
 
 
-/* OBLICK / paper catalogue art direction — a new visual system, not a palette tweak */
-:root{
- --bg:#e9e2d3;--panel:#f4eee2;--panel2:#ddd2bf;--line:#b9aa92;
- --text:#25251f;--muted:#716b5f;--red:#8e3028;--red2:#a13b2e;
- --serif:Georgia,'Times New Roman',serif;
- --sans:Arial,Helvetica,sans-serif;
-}
-html{background:#e9e2d3}
-body{background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;font-size:14px}
-.topline{height:8px;background:var(--red)}
-header{padding:22px clamp(18px,5vw,76px) 17px;border-bottom:2px solid var(--text);background:var(--bg)}
-.brand{gap:18px;align-items:center}
-.wordmark{font-family:Georgia,serif;font-size:29px;letter-spacing:.12em;font-weight:700}
-.wordmark span{color:var(--red)}
-.brand-note{font:italic 14px Georgia,serif;color:var(--muted)}
-.header-right{font:10px 'Courier New',monospace;letter-spacing:.09em;color:var(--text);text-transform:uppercase}
-.hero{padding:clamp(32px,5vw,68px) clamp(18px,5vw,76px) 38px;grid-template-columns:minmax(0,1fr) 240px;gap:40px;background:#e1d6c3;border-bottom:1px solid var(--text);align-items:end}
-.hero:before{content:"OB / 001     •     LESEARKIV FÖR RÖRLIGA BILDER";position:absolute;top:18px;left:clamp(18px,5vw,76px);font:10px 'Courier New',monospace;letter-spacing:.04em;color:var(--red)}
-.hero .eyebrow{color:var(--red);font:10px 'Courier New',monospace;letter-spacing:.12em;font-weight:normal}
-.hero h1{font:normal clamp(48px,8.4vw,116px)/.82 Georgia,'Times New Roman',serif;letter-spacing:-.075em;margin:18px 0 24px;max-width:900px}
-.hero h1 em{color:var(--red);font-style:italic}
-.hero p{font:15px/1.65 Georgia,serif;color:#514b41;max-width:420px}
-.stats{display:block;border-top:2px solid var(--text);padding-top:0;gap:0}
-.stat{display:grid;grid-template-columns:64px 1fr;align-items:baseline;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
-.stat strong{font:normal 34px Georgia,serif;color:var(--red)}
-.stat span{font:9px 'Courier New',monospace;letter-spacing:.08em;color:var(--text)}
-.layout{display:grid;grid-template-columns:205px minmax(0,1fr);background:var(--panel);min-height:65vh}
-.sidebar{padding:26px 18px 35px clamp(18px,5vw,76px);border-right:1px solid var(--line);background:#eee7d9}
-.side-title{font:10px 'Courier New',monospace;letter-spacing:.08em;color:var(--red);margin:0 0 12px}
-.navbtn{font:12px Georgia,serif;color:#514b41;border:0;border-top:1px solid #d0c4b0;border-left:0;padding:12px 5px;margin:0;border-radius:0;background:transparent}
-.navbtn:last-of-type{border-bottom:1px solid #d0c4b0}
-.navbtn:hover,.navbtn.active{background:transparent;color:var(--red);border-left:0;border-top-color:var(--red);font-weight:bold}
-.count{font:10px 'Courier New',monospace;color:var(--red)}
-.side-block{border-top:2px solid var(--text);margin-top:32px;padding-top:14px}
-.side-copy,.notice{color:var(--muted);font:11px/1.65 'Courier New',monospace}
-.small-btn{border:1px solid var(--text)!important;border-radius:0!important;background:transparent!important;color:var(--text)!important;font:10px 'Courier New',monospace!important;padding:9px 10px!important}
-.small-btn:hover{background:var(--text)!important;color:var(--panel)!important}
-.content{padding:30px clamp(18px,4vw,58px) 72px;min-width:0}
-.toolbar{gap:7px;margin-bottom:42px;padding-bottom:17px;border-bottom:1px solid var(--line)}
-.search input,.control{border:1px solid #b9aa92;border-radius:0;background:#e9e2d3;color:var(--text);padding:12px 13px;font:11px 'Courier New',monospace;height:42px}
-.search input:focus,.control:focus{outline:1px solid var(--red);border-color:var(--red)}
-.view-toggle{border:1px solid var(--text);border-radius:0;height:42px}
-.view-toggle button{border-radius:0;background:transparent;color:var(--text);padding:9px 13px}
-.view-toggle button.active{background:var(--text);color:var(--panel)}
-.section-head{border-bottom:2px solid var(--text);padding-bottom:14px;margin-bottom:24px}
-.section-head h2{font:normal clamp(30px,4vw,47px)/.95 Georgia,serif;letter-spacing:-.055em}
-.section-head p{font:12px 'Courier New',monospace;color:var(--muted)}
-.results-label{font:10px 'Courier New',monospace;color:var(--red);letter-spacing:.05em}
-.grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:35px 20px;align-items:start}
-.series-card{min-width:0;position:relative}
-.poster{aspect-ratio:2/3;border:1px solid #b5a58e;border-radius:0;background-color:#c8b99f;padding:13px;box-shadow:4px 4px 0 #d2c5b1}
-.poster:after{inset:6px;border:1px solid rgba(245,237,220,.5)}
-.poster-title{font:normal clamp(17px,1.8vw,25px)/.94 Georgia,serif;letter-spacing:-.035em;text-transform:none;color:#fff4df;text-shadow:0 1px 8px rgba(0,0,0,.4)}
-.poster-num{font:10px 'Courier New',monospace;color:#fff4df;letter-spacing:.06em}
-.card-meta{padding-top:12px}
-.profile-title-button{font:normal 22px/1.03 Georgia,serif!important;color:var(--text);letter-spacing:-.035em}
-.profile-title-button:hover{color:var(--red)}
-.card-year,.series-extra{font:10px 'Courier New',monospace!important;color:var(--muted)}
-.series-summary{font:12px/1.55 Georgia,serif;color:#5c5549}
-.card-topline{align-items:flex-start}
-.card-actions{gap:5px;margin-top:9px}
-.status-btn{border:1px solid #b9aa92!important;border-radius:0!important;background:transparent!important;color:var(--text)!important;font:10px 'Courier New',monospace!important;padding:8px 5px!important}
-.status-btn:hover,.status-btn.active,.status-btn.chosen{background:var(--red)!important;border-color:var(--red)!important;color:#fff7e9!important}
-.series-card:first-child{grid-column:auto;display:block;padding:0;background:transparent;border:0}
-.series-card:first-child .poster{min-height:0;aspect-ratio:2/3}
-.series-card:first-child .poster-title{font-size:clamp(17px,1.8vw,25px)}
-.series-card:first-child .profile-title-button{font:normal 22px/1.03 Georgia,serif!important}
-.series-card:first-child .card-meta{padding:12px 0 0}
-.list-row{border-bottom:1px solid var(--line);padding:12px 8px;border-radius:0}
-.mini-poster{border-radius:0}
-.discover-panel,.stats-panel,.profile-dialog{border-radius:0!important}
-footer{background:var(--bg)}
-@media(min-width:1200px){.grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:39px 22px}.series-card:first-child{grid-column:auto}}
-@media(max-width:900px){.layout{grid-template-columns:170px minmax(0,1fr)}.sidebar{padding-left:18px}.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 15px}.hero{grid-template-columns:minmax(0,1fr) 205px}}
-@media(max-width:650px){
- header{padding:17px 18px 14px}.wordmark{font-size:24px}.brand{gap:10px}.brand-note{font-size:12px}.header-right{max-width:110px;font-size:9px;text-align:right;line-height:1.5}
- .hero{padding:54px 18px 25px;grid-template-columns:1fr;gap:24px}.hero:before{left:18px;top:17px;font-size:8px}.hero h1{font-size:clamp(49px,12vw,76px)}.hero p{font-size:14px}
- .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.stat{display:block;padding:9px 0 0;border-bottom:0;border-top:1px solid var(--line)}.stat strong{display:block;font-size:29px}.stat span{font-size:8px;line-height:1.4}
- .layout{display:flex;flex-direction:column}.sidebar{padding:14px 18px;border-right:0;border-bottom:1px solid var(--text);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 12px}.sidebar>.side-title{grid-column:1/-1;margin-bottom:6px}.navbtn{min-height:38px;padding:8px 3px}.side-block{grid-column:1/-1;margin-top:17px}
- .content{padding:24px 18px 48px}.toolbar{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:30px}.search{grid-column:1/-1;min-width:0}.search input{width:100%}.control{width:100%;min-width:0}.view-toggle{justify-self:end}
- .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 14px}.poster{padding:10px}.poster-title{font-size:18px}.card-actions{flex-wrap:wrap}.status-btn{font-size:9px!important}
-}
-@media(prefers-reduced-motion:no-preference){.series-card{transition:transform .18s ease}.series-card:hover{transform:translateY(-3px)}}
-
-
-/* Remove decorative hairlines; keep layout defined by spacing and typography */
-.topline{height:4px}
-header,.hero,.sidebar,.toolbar,.section-head,.side-block,.navbtn,.navbtn:last-of-type,
-.stats,.stat,.view-toggle,.list-row{border:0!important;box-shadow:none}
-.hero{position:relative}
-.hero:before{letter-spacing:.06em}
-.stats{gap:0}
-.stat{padding:10px 0}
-.stat+ .stat{margin-top:4px}
-.sidebar{box-shadow:none}
-.navbtn{padding:11px 5px}
-.navbtn:hover,.navbtn.active{background:#e1d6c3!important;border-radius:2px}
-.toolbar{padding-bottom:0}
-.section-head{margin-bottom:24px}
-.poster{border:0;box-shadow:3px 4px 0 #d2c5b1}
-.poster:after{border:0!important}
-.series-card{border:0!important}
-.status-btn{border:0!important;border-radius:2px!important;background:#e1d6c3!important}
-.status-btn:hover,.status-btn.active,.status-btn.chosen{background:var(--red)!important}
-.small-btn{border:0!important;border-radius:2px!important;background:#e1d6c3!important}
-.small-btn:hover{background:var(--text)!important}
-@media(max-width:650px){
- .navbtn{border:0!important}
- .stat{border:0!important}
- .toolbar{border:0!important}
-}
-
-
-/* Restore clear contrast for archive navigation and list controls on paper background */
-.sidebar,.sidebar .side-title,.sidebar .side-copy{color:var(--text)}
-.navbtn{color:var(--text)!important;background:transparent!important;border:0!important;border-radius:2px!important;opacity:1}
-.navbtn .count{color:var(--muted)!important}
-.navbtn:hover,.navbtn.active{color:var(--red)!important;background:#e1d6c3!important}
-.control,.search,.filter,.status-filter{color:var(--text)}
-#statsPanel{color:var(--text)}
-
-
-
-/* NAVIGATION FIX: keep archive menu visible on desktop and mobile */
-/* FIX: keep the full archive navigation visible */
-body .layout > .sidebar{
-  display:grid!important;
-  visibility:visible!important;
-  opacity:1!important;
-  height:auto!important;
-  max-height:none!important;
-  overflow:visible!important;
-  position:relative!important;
-  z-index:2!important;
-}
-body .layout > .sidebar > .navbtn{
-  display:flex!important;
-  visibility:visible!important;
-  opacity:1!important;
-  color:#eee5d6!important;
-}
-body .layout > .sidebar > .navbtn:hover,
-body .layout > .sidebar > .navbtn.active{
-  color:#fff0dc!important;
-}
+/* Final layout safeguards: keep the archive grid and list view predictable. */
+.list-row{grid-template-columns:54px minmax(0,1fr) 70px minmax(150px,210px)}
+.list-actions{min-width:0}
 @media(max-width:760px){
-  body .layout > .sidebar{
-    grid-template-columns:repeat(2,minmax(0,1fr))!important;
-    padding:0 18px!important;
-  }
-  body .layout > .sidebar > .navbtn{
-    min-height:42px!important;
-    width:100%!important;
-  }
+ .list-row{grid-template-columns:40px minmax(0,1fr) 100px;gap:10px}
+ .list-row .list-actions{grid-column:2/4;grid-row:2}
+ .list-row > .list-year{display:none}
+ .list-row div .list-year{display:block}
 }
-
-
-/* FIX: restore readable navigation on the light paper catalogue */
-body .layout > .sidebar{background:#eee7d9!important;color:#25251f!important}
-body .layout > .sidebar > .side-title{color:#8e3028!important}
-body .layout > .sidebar > .navbtn{
-  display:flex!important;
-  visibility:visible!important;
-  opacity:1!important;
-  color:#514b41!important;
-  background:transparent!important;
-}
-body .layout > .sidebar > .navbtn .count{color:#8e3028!important}
-body .layout > .sidebar > .navbtn:hover,
-body .layout > .sidebar > .navbtn.active{
-  color:#8e3028!important;
-  background:#e1d6c3!important;
-  border-bottom-color:#a13b2e!important;
-}
-body .layout > .sidebar > .side-block{color:#25251f!important}
-body .layout > .sidebar > .side-block .side-copy{color:#716b5f!important}
-@media(max-width:760px){
-  body .layout > .sidebar{grid-template-columns:repeat(2,minmax(0,1fr))!important}
-}
-
-
-/* NAV RECOVERY: force every archive category to occupy visible space */
-body .layout{
-  display:grid!important;
-  grid-template-columns:205px minmax(0,1fr)!important;
-  align-items:start!important;
-}
-body .layout > aside.sidebar{
-  display:flex!important;
-  flex-direction:column!important;
-  align-items:stretch!important;
-  gap:0!important;
-  min-width:0!important;
-  width:auto!important;
-  height:auto!important;
-  max-height:none!important;
-  overflow:visible!important;
-  padding:22px 16px!important;
-  background:#eee7d9!important;
-  border-right:1px solid #b9aa92!important;
-}
-body .layout > aside.sidebar > .side-title{
-  display:block!important;
-  visibility:visible!important;
-  color:#8e3028!important;
-  margin:0 0 12px!important;
-}
-body .layout > aside.sidebar > button.navbtn{
-  display:flex!important;
-  flex:0 0 auto!important;
-  position:relative!important;
-  width:100%!important;
-  min-height:42px!important;
-  height:auto!important;
-  max-height:none!important;
-  overflow:visible!important;
-  visibility:visible!important;
-  opacity:1!important;
-  align-items:center!important;
-  justify-content:space-between!important;
-  color:#514b41!important;
-  background:transparent!important;
-  text-align:left!important;
-  white-space:normal!important;
-  padding:11px 8px!important;
-  border-bottom:1px solid #d0c4b0!important;
-}
-body .layout > aside.sidebar > button.navbtn:hover,
-body .layout > aside.sidebar > button.navbtn.active{
-  color:#8e3028!important;
-  background:#e1d6c3!important;
-}
-@media(max-width:760px){
-  body .layout{display:flex!important;flex-direction:column!important}
-  body .layout > aside.sidebar{
-    display:grid!important;
-    grid-template-columns:repeat(2,minmax(0,1fr))!important;
-    width:100%!important;
-    padding:14px 18px!important;
-    border-right:0!important;
-    border-bottom:1px solid #b9aa92!important;
-    gap:0 12px!important;
-  }
-  body .layout > aside.sidebar > .side-title{grid-column:1/-1!important}
-  body .layout > aside.sidebar > button.navbtn{width:100%!important;min-height:42px!important}
-}
-
 </style>
 </head>
 <body>
@@ -515,7 +277,7 @@ body .layout > aside.sidebar > button.navbtn.active{
 <script>
 /* Lägg till eller byt ut titlar i SERIES. Statusval sparas separat i localStorage. */
 const SERIES = [
- {title:"Breaking Bad",year:2008},{title:"Better Call Saul",year:2015},{title:"The Bear",year:2022},{title:"Succession",year:2018},{title:"The White Lotus",year:2021},{title:"Stranger Things",year:2016},{title:"The Last of Us",year:2023},{title:"The Crown",year:2016},{title:"Fleabag",year:2016},{title:"Dark",year:2017},{title:"The Queen's Gambit",year:2020},{title:"Severance",year:2022},{title:"The Office (US)",year:2005},{title:"Parks and Recreation",year:2009},{title:"Friends",year:1994},{title:"How I Met Your Mother",year:2005},{title:"Brooklyn Nine-Nine",year:2013},{title:"Modern Family",year:2009},{title:"Gilmore Girls",year:2000},{title:"Euphoria",year:2019},{title:"Normal People",year:2020},{title:"The Handmaid's Tale",year:2017},{title:"Black Mirror",year:2011},{title:"Sherlock",year:2010},{title:"Peaky Blinders",year:2013},{title:"The Last Kingdom",year:2015},{title:"Game of Thrones",year:2011},{title:"House of the Dragon",year:2022},{title:"The Walking Dead",year:2010},{title:"The Vampire Diaries",year:2009},{title:"Pretty Little Liars",year:2010},{title:"Gossip Girl",year:2007},{title:"One Tree Hill",year:2003},{title:"The O.C.",year:2003},{title:"Grey's Anatomy",year:2005},{title:"House",year:2004},{title:"The Good Place",year:2016},{title:"Ted Lasso",year:2020},{title:"The Morning Show",year:2019},{title:"Only Murders in the Building",year:2021},{title:"Abbott Elementary",year:2021},{title:"Atypical",year:2017},{title:"After Life",year:2019},{title:"Arrested Development",year:2003},{title:"Atlanta",year:2016},{title:"Big Little Lies",year:2017},{title:"Black-ish",year:2014},{title:"BoJack Horseman",year:2014},{title:"Californication",year:2007},{title:"Chernobyl",year:2019},{title:"Community",year:2009},{title:"Derry Girls",year:2018},{title:"Desperate Housewives",year:2004},{title:"Dexter",year:2006},{title:"Downton Abbey",year:2010},{title:"Entourage",year:2004},{title:"The End of the F***ing World",year:2017},{title:"Evil",year:2019},{title:"Fargo",year:2014},{title:"The Flight Attendant",year:2020},{title:"Friday Night Lights",year:2006},{title:"The Good Doctor",year:2017},{title:"The Good Wife",year:2009},{title:"Hacks",year:2021},{title:"Homeland",year:2011},{title:"House of Cards",year:2013},{title:"Insecure",year:2016},{title:"The IT Crowd",year:2006},{title:"Jane the Virgin",year:2014},{title:"Killing Eve",year:2018},{title:"The Knick",year:2014},{title:"The Kominsky Method",year:2018},{title:"Lost",year:2004},{title:"Mad Men",year:2007},{title:"The Marvelous Mrs. Maisel",year:2017},{title:"Mindhunter",year:2017},{title:"Mr. Robot",year:2015},{title:"Narcos",year:2015},{title:"The Newsroom",year:2012},{title:"Ozark",year:2017},{title:"The Penguin",year:2024},{title:"The Pitt",year:2025},{title:"Poker Face",year:2023},{title:"Prison Break",year:2005},{title:"Reacher",year:2022},{title:"Russian Doll",year:2019},{title:"Scrubs",year:2001},{title:"Sex and the City",year:1998},{title:"Sex Education",year:2019},{title:"Shameless (US)",year:2011},{title:"Six Feet Under",year:2001},{title:"Slow Horses",year:2022},{title:"Suits",year:2011},{title:"The Sopranos",year:1999},{title:"Squid Game",year:2021},{title:"Superstore",year:2015},{title:"The Tourist",year:2022},{title:"True Detective",year:2014},{title:"The Umbrella Academy",year:2019},{title:"Veep",year:2012},{title:"The Wire",year:2002},{title:"Yellowjackets",year:2021},{title:"You",year:2018},{title:"The 100",year:2014},{title:"9-1-1",year:2018},{title:"American Horror Story",year:2011},{title:"The Americans",year:2013},{title:"Andor",year:2022},{title:"Anne with an E",year:2017},{title:"The Artful Dodger",year:2023},{title:"The Big Bang Theory",year:2007},{title:"The Boys",year:2019},{title:"Bridgerton",year:2020},{title:"Buffy the Vampire Slayer",year:1997},{title:"The Carrie Diaries",year:2013},{title:"Castle",year:2009},{title:"Chicago Fire",year:2012},{title:"The Chosen",year:2017},{title:"Chuck",year:2007},{title:"The Closer",year:2005},{title:"Cold Case",year:2003},{title:"The Rookie",year:2018},{title:"Cobra Kai",year:2018},{title:"The Expanse",year:2015},{title:"Firefly",year:2002},{title:"Foundation",year:2021},{title:"Fringe",year:2008},{title:"Good Omens",year:2019},{title:"The Great",year:2020},{title:"The Haunting of Hill House",year:2018},{title:"Heartstopper",year:2022},{title:"The Hills",year:2006},{title:"The Lincoln Lawyer",year:2022},{title:"Lucifer",year:2016},{title:"Manifest",year:2018},{title:"The Mentalist",year:2008},{title:"The OA",year:2016},{title:"Orange Is the New Black",year:2013},{title:"Orphan Black",year:2013},{title:"Outlander",year:2014},{title:"The Peripheral",year:2022},{title:"Revenge",year:2011},{title:"Riverdale",year:2017},{title:"Roswell, New Mexico",year:2019},{title:"Scream Queens",year:2015},{title:"Shadow and Bone",year:2021},{title:"The Shannara Chronicles",year:2016},{title:"The Society",year:2019},{title:"Station Eleven",year:2021},{title:"Supernatural",year:2005},{title:"The 3 Body Problem",year:2024},{title:"The Tudors",year:2007},{title:"Vikings",year:2013},{title:"Vikings: Valhalla",year:2022},{title:"Wednesday",year:2022},{title:"Westworld",year:2016},{title:"The X-Files",year:1993},{title:"Bron/Broen",year:2011},{title:"Borgen",year:2010},{title:"Young Royals",year:2021},{title:"Bonusfamiljen",year:2017},{title:"Solsidan",year:2010},{title:"Tunna blå linjen",year:2021},{title:"Kalifat",year:2020},{title:"Snabba Cash",year:2021},{title:"Störst av allt",year:2019},{title:"Quicksand",year:2019},{title:"The Bridge",year:2011},{title:"Kastanjemannen",year:2021},{title:"Rita",year:2012},{title:"Exit",year:2019},{title:"Skam",year:2015},{title:"Lilyhammer",year:2012},{title:"Hjem til jul",year:2019},{title:"The Rain",year:2018},{title:"The Chestnut Man",year:2021},{title:"Young Wallander",year:2020},{title:"Deadwind",year:2018},{title:"Trapped",year:2015},{title:"The Killing",year:2007},{title:"Wallander",year:2005},{title:"Beck",year:1997},{title:"Jordskott",year:2015},{title:"Äkta människor",year:2012},{title:"Vår tid är nu",year:2017},{title:"Gåsmamman",year:2015},{title:"Dips",year:2018},{title:"Solsidan",year:2010},{title:"Clark",year:2022},{title:"The Playlist",year:2022},{title:"A Nearly Normal Family",year:2023},{title:"The Åre Murders",year:2025}
+ {title:"Breaking Bad",year:2008},{title:"Better Call Saul",year:2015},{title:"The Bear",year:2022},{title:"Succession",year:2018},{title:"The White Lotus",year:2021},{title:"Stranger Things",year:2016},{title:"The Last of Us",year:2023},{title:"The Crown",year:2016},{title:"Fleabag",year:2016},{title:"Dark",year:2017},{title:"The Queen's Gambit",year:2020},{title:"Severance",year:2022},{title:"The Office (US)",year:2005},{title:"Parks and Recreation",year:2009},{title:"Friends",year:1994},{title:"How I Met Your Mother",year:2005},{title:"Brooklyn Nine-Nine",year:2013},{title:"Modern Family",year:2009},{title:"Gilmore Girls",year:2000},{title:"Euphoria",year:2019},{title:"Normal People",year:2020},{title:"The Handmaid's Tale",year:2017},{title:"Black Mirror",year:2011},{title:"Sherlock",year:2010},{title:"Peaky Blinders",year:2013},{title:"The Last Kingdom",year:2015},{title:"Game of Thrones",year:2011},{title:"House of the Dragon",year:2022},{title:"The Walking Dead",year:2010},{title:"The Vampire Diaries",year:2009},{title:"Pretty Little Liars",year:2010},{title:"Gossip Girl",year:2007},{title:"One Tree Hill",year:2003},{title:"The O.C.",year:2003},{title:"Grey's Anatomy",year:2005},{title:"House",year:2004},{title:"The Good Place",year:2016},{title:"Ted Lasso",year:2020},{title:"The Morning Show",year:2019},{title:"Only Murders in the Building",year:2021},{title:"Abbott Elementary",year:2021},{title:"Atypical",year:2017},{title:"After Life",year:2019},{title:"Arrested Development",year:2003},{title:"Atlanta",year:2016},{title:"Big Little Lies",year:2017},{title:"Black-ish",year:2014},{title:"BoJack Horseman",year:2014},{title:"Californication",year:2007},{title:"Chernobyl",year:2019},{title:"Community",year:2009},{title:"Derry Girls",year:2018},{title:"Desperate Housewives",year:2004},{title:"Dexter",year:2006},{title:"Downton Abbey",year:2010},{title:"Entourage",year:2004},{title:"The End of the F***ing World",year:2017},{title:"Evil",year:2019},{title:"Fargo",year:2014},{title:"The Flight Attendant",year:2020},{title:"Friday Night Lights",year:2006},{title:"The Good Doctor",year:2017},{title:"The Good Wife",year:2009},{title:"Hacks",year:2021},{title:"Homeland",year:2011},{title:"House of Cards",year:2013},{title:"Insecure",year:2016},{title:"The IT Crowd",year:2006},{title:"Jane the Virgin",year:2014},{title:"Killing Eve",year:2018},{title:"The Knick",year:2014},{title:"The Kominsky Method",year:2018},{title:"Lost",year:2004},{title:"Mad Men",year:2007},{title:"The Marvelous Mrs. Maisel",year:2017},{title:"Mindhunter",year:2017},{title:"Mr. Robot",year:2015},{title:"Narcos",year:2015},{title:"The Newsroom",year:2012},{title:"Ozark",year:2017},{title:"The Penguin",year:2024},{title:"The Pitt",year:2025},{title:"Poker Face",year:2023},{title:"Prison Break",year:2005},{title:"Reacher",year:2022},{title:"Russian Doll",year:2019},{title:"Scrubs",year:2001},{title:"Sex and the City",year:1998},{title:"Sex Education",year:2019},{title:"Shameless (US)",year:2011},{title:"Six Feet Under",year:2001},{title:"Slow Horses",year:2022},{title:"Suits",year:2011},{title:"The Sopranos",year:1999},{title:"Squid Game",year:2021},{title:"Superstore",year:2015},{title:"The Tourist",year:2022},{title:"True Detective",year:2014},{title:"The Umbrella Academy",year:2019},{title:"Veep",year:2012},{title:"The Wire",year:2002},{title:"Yellowjackets",year:2021},{title:"You",year:2018},{title:"The 100",year:2014},{title:"9-1-1",year:2018},{title:"American Horror Story",year:2011},{title:"The Americans",year:2013},{title:"Andor",year:2022},{title:"Anne with an E",year:2017},{title:"The Artful Dodger",year:2023},{title:"The Big Bang Theory",year:2007},{title:"The Boys",year:2019},{title:"Bridgerton",year:2020},{title:"Buffy the Vampire Slayer",year:1997},{title:"The Carrie Diaries",year:2013},{title:"Castle",year:2009},{title:"Chicago Fire",year:2012},{title:"The Chosen",year:2017},{title:"Chuck",year:2007},{title:"The Closer",year:2005},{title:"Cold Case",year:2003},{title:"The Rookie",year:2018},{title:"Cobra Kai",year:2018},{title:"The Expanse",year:2015},{title:"Firefly",year:2002},{title:"Foundation",year:2021},{title:"Fringe",year:2008},{title:"Good Omens",year:2019},{title:"The Great",year:2020},{title:"The Haunting of Hill House",year:2018},{title:"Heartstopper",year:2022},{title:"The Hills",year:2006},{title:"The Lincoln Lawyer",year:2022},{title:"Lucifer",year:2016},{title:"Manifest",year:2018},{title:"The Mentalist",year:2008},{title:"The OA",year:2016},{title:"Orange Is the New Black",year:2013},{title:"Orphan Black",year:2013},{title:"Outlander",year:2014},{title:"The Peripheral",year:2022},{title:"Revenge",year:2011},{title:"Riverdale",year:2017},{title:"Roswell, New Mexico",year:2019},{title:"Scream Queens",year:2015},{title:"Shadow and Bone",year:2021},{title:"The Shannara Chronicles",year:2016},{title:"The Society",year:2019},{title:"Station Eleven",year:2021},{title:"Supernatural",year:2005},{title:"The 3 Body Problem",year:2024},{title:"The Tudors",year:2007},{title:"Vikings",year:2013},{title:"Vikings: Valhalla",year:2022},{title:"Wednesday",year:2022},{title:"Westworld",year:2016},{title:"The X-Files",year:1993},{title:"Bron/Broen",year:2011},{title:"Borgen",year:2010},{title:"Young Royals",year:2021},{title:"Bonusfamiljen",year:2017},{title:"Solsidan",year:2010},{title:"Tunna blå linjen",year:2021},{title:"Kalifat",year:2020},{title:"Snabba Cash",year:2021},{title:"Störst av allt",year:2019},{title:"Quicksand",year:2019},{title:"The Bridge",year:2011},{title:"Kastanjemannen",year:2021},{title:"Rita",year:2012},{title:"Exit",year:2019},{title:"Skam",year:2015},{title:"Lilyhammer",year:2012},{title:"Hjem til jul",year:2019},{title:"The Rain",year:2018},{title:"The Chestnut Man",year:2021},{title:"Young Wallander",year:2020},{title:"Deadwind",year:2018},{title:"Trapped",year:2015},{title:"The Killing",year:2007},{title:"Wallander",year:2005},{title:"Beck",year:1997},{title:"Jordskott",year:2015},{title:"Äkta människor",year:2012},{title:"Vår tid är nu",year:2017},{title:"Gåsmamman",year:2015},{title:"Dips",year:2018},{title:"Clark",year:2022},{title:"The Playlist",year:2022},{title:"A Nearly Normal Family",year:2023},{title:"The Åre Murders",year:2025}
 ];
 const KEY="oblick-series-status-v1", REVIEW_KEY="oblick-discover-reviewed-v1", META_KEY="oblick-series-meta-v1", FAVORITE_KEY="oblick-series-favorites-v1", PERSONAL_KEY="oblick-series-personal-v1", DIARY_KEY="oblick-series-diary-v1";
 let statuses={};try{statuses=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(e){}
@@ -578,9 +340,9 @@ function filtered(){
  if(sf==="none")a=a.filter(s=>!statuses[s.title]);else if(sf!=="all")a=a.filter(s=>statuses[s.title]===sf);
  return a.sort((a,b)=>sort==="za"?b.title.localeCompare(a.title,"sv"):sort==="year"?(b.year||0)-(a.year||0):a.title.localeCompare(b.title,"sv"));
 }
-function actions(s,compact=false){return '<div class="'+(compact?"list-actions":"card-actions")+'"><button class="status-btn '+(statuses[s.title]==="started"?"chosen":"")+'" data-title="'+safe(s.title)+'" data-status="started">Påbörjat</button><button class="status-btn '+(statuses[s.title]==="done"?"chosen":"")+'" data-title="'+safe(s.title)+'" data-status="done">Sett klart</button><button class="favorite-btn '+(favorites[s.title]?"active":"") +'" title="Favorit" aria-label="Favorit: '+safe(s.title)+'" data-favorite="'+safe(s.title)+'">'+(favorites[s.title]?"♥":"♡")+'</button></div>'}
+function actions(s,compact=false){return '<div class="'+(compact?"list-actions":"card-actions")+'"><button class="status-btn '+(statuses[s.title]==="started"?"chosen":"") +'" aria-pressed="'+(statuses[s.title]==="started") +'" data-title="'+safe(s.title)+'" data-status="started">Påbörjat</button><button class="status-btn '+(statuses[s.title]==="done"?"chosen":"") +'" aria-pressed="'+(statuses[s.title]==="done") +'" data-title="'+safe(s.title)+'" data-status="done">Sett klart</button>'+(compact?'<button class="favorite-btn '+(favorites[s.title]?"active":"") +'" title="Favorit" aria-label="Favorit: '+safe(s.title)+'" aria-pressed="'+!!favorites[s.title]+'" data-favorite="'+safe(s.title)+'">'+(favorites[s.title]?"♥":"♡")+'</button>':'')+'</div>'}
 function posterStyle(s,i){const m=metadata[s.title];return m&&m.image?`background-image:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.9) 100%),url(&quot;${safe(m.image)}&quot;)`:`background-image:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.88) 100%),linear-gradient(145deg,hsl(${i*37%360} 35% 28%),#151515 70%)`}
-function extraMeta(s){const m=metadata[s.title];if(!m)return "";return `<div class="series-extra">${m.genres.slice(0,3).map(safe).join(" · ")}${m.seasons?` · ${m.seasons} säsonger`:""}</div>${m.summary?`<p class="series-summary">${safe(m.summary.slice(0,135))}${m.summary.length>135?"…":""}</p>`:""}`}
+function extraMeta(s){const m=metadata[s.title];if(!m)return "";const genres=Array.isArray(m.genres)?m.genres:[];return `${genres.length?`<div class="series-extra">${genres.slice(0,3).map(safe).join(" · ")}${m.seasons?` · ${m.seasons} säsonger`:""}</div>`:""}${m.summary?`<p class="series-summary">${safe(m.summary.slice(0,135))}${m.summary.length>135?"…":""}</p>`:""} `}
 function card(s,i){let initials=s.title.split(" ").slice(0,2).join(" ");return '<article class="series-card"><div class="poster" style="'+posterStyle(s,i)+'"><span class="poster-num">'+String(i+1).padStart(2,"0")+'</span><div class="poster-title">'+safe(initials)+'</div></div><div class="card-meta"><div class="card-topline"><button class="profile-title-button" data-profile="'+safe(s.title)+'">'+safe(s.title)+'</button><button class="favorite-btn '+(favorites[s.title]?"active":"") +'" title="Favorit" data-favorite="'+safe(s.title)+'">'+(favorites[s.title]?"♥":"♡")+'</button></div><div class="card-year">'+(s.year||"Årtal saknas")+(statuses[s.title]?' · '+statusName(statuses[s.title]):'')+'</div>'+extraMeta(s)+actions(s)+'</div></article>'}
 function row(s,i){return '<article class="list-row"><div class="mini-poster" style="'+(metadata[s.title]&&metadata[s.title].image?'background-image:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.65)),url(&quot;'+safe(metadata[s.title].image)+'&quot;);background-size:cover;background-position:center;color:white;text-shadow:0 1px 4px #000':'')+'">'+(metadata[s.title]&&metadata[s.title].image?'':safe(s.title.split(" ").slice(0,2).join(" ")))+'</div><div><button class="profile-title-button list-name" data-profile="'+safe(s.title)+'">'+safe(s.title)+'</button><div class="list-year">'+(s.year||"Årtal saknas")+(statuses[s.title]?' · '+statusName(statuses[s.title]):' · Ej markerad')+'</div></div><div class="list-year">'+(s.year||"—")+'</div>'+actions(s,true)+'</article>'}
 function currentDiscover(){const genre=$("discoverGenre")?$("discoverGenre").value:"";let candidates=SERIES.filter(s=>!reviewed[s.title]&&(!genre||(metadata[s.title]&&metadata[s.title].genres&&metadata[s.title].genres.includes(genre))));if(!candidates.length&&genre){return null}if(discoverChoice&&candidates.some(s=>s.title===discoverChoice))return candidates.find(s=>s.title===discoverChoice);return candidates[0]||null}
@@ -598,11 +360,10 @@ function render(){
  $("results").className=view==="diary"?"list":(mode==="grid"?"grid":"list");$("results").innerHTML=view==="diary"?renderDiary():arr.map((s,i)=>mode==="grid"?card(s,i):row(s,i)).join("");
  $("empty").classList.toggle("hidden",view==="discover"||view==="stats"||arr.length>0);$("results").classList.toggle("hidden",view==="discover"||view==="stats"||arr.length===0);$("statsPanel").classList.toggle("hidden",view!=="stats");if(view==="stats")renderStats();
  $("gridBtn").classList.toggle("active",mode==="grid");$("listBtn").classList.toggle("active",mode==="list");
- bindStatusButtons($("results"));
 }
 function renderDiary(){if(!diary.length)return `<div class="empty"><strong>Din tittdagbok börjar här.</strong>Markera en serie som påbörjad eller avslutad för att skapa en historik.</div>`;return `<div class="list">${diary.map(d=>`<div class="list-row" style="grid-template-columns:110px minmax(0,1fr)"><div class="list-year">${safe(d.date)}</div><div><strong>${safe(d.title)}</strong><div class="list-year">${safe(d.event)}</div></div></div>`).join("")}</div>`}
 function renderStats(){const done=SERIES.filter(s=>statuses[s.title]==="done").length,started=SERIES.filter(s=>statuses[s.title]==="started").length,unseen=SERIES.length-done-started,fav=Object.values(favorites).filter(Boolean).length;const genreCounts={};SERIES.forEach(s=>(metadata[s.title]?.genres||[]).forEach(g=>genreCounts[g]=(genreCounts[g]||0)+1));const genres=Object.entries(genreCounts).sort((a,b)=>b[1]-a[1]).slice(0,7);$("statsContent").innerHTML=`<div class="stats-dashboard"><div class="stat-tile"><strong>${SERIES.length}</strong><span>Serier i katalogen</span></div><div class="stat-tile"><strong>${done}</strong><span>Sett klart</span></div><div class="stat-tile"><strong>${started}</strong><span>Påbörjade</span></div><div class="stat-tile"><strong>${unseen}</strong><span>Ej markerade</span></div><div class="stat-tile"><strong>${fav}</strong><span>Favoriter</span></div><div class="stat-tile"><strong>${SERIES.length?Math.round(done/SERIES.length*100):0}%</strong><span>Av katalogen klar</span></div></div><h3 style="font:normal 26px var(--serif)">Din fördelning</h3><div class="bar-row"><span>Sett klart</span><div class="bar-track"><div class="bar-fill" style="width:${done/SERIES.length*100}%"></div></div><span>${done}</span></div><div class="bar-row"><span>Påbörjat</span><div class="bar-track"><div class="bar-fill" style="width:${started/SERIES.length*100}%"></div></div><span>${started}</span></div><div class="bar-row"><span>Ej markerade</span><div class="bar-track"><div class="bar-fill" style="width:${unseen/SERIES.length*100}%"></div></div><span>${unseen}</span></div><h3 style="font:normal 26px var(--serif);margin-top:32px">Vanliga genrer i katalogen</h3><p class="side-copy">Genrer visas när serieinformationen har hämtats.</p>${genres.map(([g,n])=>`<div class="bar-row"><span>${safe(g)}</span><div class="bar-track"><div class="bar-fill" style="width:${n/(genres[0]?.[1]||1)*100}%"></div></div><span>${n}</span></div>`).join("")||""}`}
-function openProfile(title){const s=SERIES.find(x=>x.title===title);if(!s)return;const m=metadata[title]||{};const mine=personalFor(title);$("profileContent").innerHTML=`<div class="profile-layout"><div class="profile-poster" style="${posterStyle(s,SERIES.indexOf(s))}"></div><div class="profile-text"><div class="eyebrow">Serieprofil · ${s.year||"Årtal saknas"}</div><h2 id="profileTitle">${safe(s.title)}</h2><div class="discover-tags">${safe((m.genres||[]).join(" · ")||"Hämtar genrer…")}${m.seasons?" · "+m.seasons+" säsonger":""}${m.status?" · "+safe(m.status):""}</div><p>${safe(m.summary||"Ingen sammanfattning tillgänglig ännu.")}</p><div class="current-status">Din status: ${statusName(statuses[title])||"Inte markerad"}</div><div class="personal-fields"><label>Betyg (1–10)<input id="profileRating" class="control" type="number" min="0" max="10" value="${Number(mine.rating)||0}" style="width:100%;margin:6px 0 12px"></label><label>Personliga anteckningar<textarea id="profileNotes" class="control" rows="3" style="width:100%;margin:6px 0 12px;resize:vertical" placeholder="Vad tyckte du?">${safe(mine.notes||"")}</textarea></label><label style="display:block;margin:8px 0"><input id="profileNext" type="checkbox" ${mine.next?"checked":""}> Lägg i ”Att se härnäst”</label><label style="display:block;margin:8px 0"><input id="profileWatch" type="checkbox" ${mine.seasonWatch?"checked":""}> Bevaka nästa säsong</label><label>Bevakningsnotering<input id="profileSeasonNote" class="control" style="width:100%;margin:6px 0 12px" value="${safe(mine.seasonNote||"")}" placeholder="T.ex. väntar på säsong 3"></label><button class="small-btn" id="savePersonalBtn">Spara personliga uppgifter</button></div><div class="card-actions"><button class="status-btn ${statuses[title]==="started"?"chosen":""}" data-title="${safe(title)}" data-status="started">Påbörjat</button><button class="status-btn ${statuses[title]==="done"?"chosen":""}" data-title="${safe(title)}" data-status="done">Sett klart</button><button class="favorite-btn ${favorites[title]?"active":""}" data-favorite="${safe(title)}">${favorites[title]?"♥ Favorit":"♡ Favorit"}</button></div></div></div>`;$("profileModal").classList.remove("hidden");bindStatusButtons($("profileContent"));if(!m.image)ensureMeta(s)}
+function openProfile(title){const s=SERIES.find(x=>x.title===title);if(!s)return;const m=metadata[title]||{};const mine=personalFor(title);$("profileContent").innerHTML=`<div class="profile-layout"><div class="profile-poster" style="${posterStyle(s,SERIES.indexOf(s))}"></div><div class="profile-text"><div class="eyebrow">Serieprofil · ${s.year||"Årtal saknas"}</div><h2 id="profileTitle">${safe(s.title)}</h2><div class="discover-tags">${safe((m.genres||[]).join(" · ")||"Hämtar genrer…")}${m.seasons?" · "+m.seasons+" säsonger":""}${m.status?" · "+safe(m.status):""}</div><p>${safe(m.summary||"Ingen sammanfattning tillgänglig ännu.")}</p><div class="current-status">Din status: ${statusName(statuses[title])||"Inte markerad"}</div><div class="personal-fields"><label>Betyg (1–10)<input id="profileRating" class="control" type="number" min="0" max="10" value="${Number(mine.rating)||0}" style="width:100%;margin:6px 0 12px"></label><label>Personliga anteckningar<textarea id="profileNotes" class="control" rows="3" style="width:100%;margin:6px 0 12px;resize:vertical" placeholder="Vad tyckte du?">${safe(mine.notes||"")}</textarea></label><label style="display:block;margin:8px 0"><input id="profileNext" type="checkbox" ${mine.next?"checked":""}> Lägg i ”Att se härnäst”</label><label style="display:block;margin:8px 0"><input id="profileWatch" type="checkbox" ${mine.seasonWatch?"checked":""}> Bevaka nästa säsong</label><label>Bevakningsnotering<input id="profileSeasonNote" class="control" style="width:100%;margin:6px 0 12px" value="${safe(mine.seasonNote||"")}" placeholder="T.ex. väntar på säsong 3"></label><button class="small-btn" id="savePersonalBtn">Spara personliga uppgifter</button></div><div class="card-actions"><button class="status-btn ${statuses[title]==="started"?"chosen":""}" aria-pressed="${statuses[title]==="started"}" data-title="${safe(title)}" data-status="started">Påbörjat</button><button class="status-btn ${statuses[title]==="done"?"chosen":""}" aria-pressed="${statuses[title]==="done"}" data-title="${safe(title)}" data-status="done">Sett klart</button><button class="favorite-btn ${favorites[title]?"active":""}" data-favorite="${safe(title)}">${favorites[title]?"♥ Favorit":"♡ Favorit"}</button></div></div></div>`;$("profileModal").classList.remove("hidden");if(!m.image)ensureMeta(s)}
 function setSeriesStatus(title,status){
  if(!title||!status)return;
  if(statuses[title]===status)delete statuses[title];else statuses[title]=status;
@@ -611,24 +372,14 @@ function setSeriesStatus(title,status){
  render();
  if(!$("profileModal").classList.contains("hidden"))openProfile(title);
 }
-function bindStatusButtons(root=document){
- root.querySelectorAll("button[data-status]").forEach(button=>{
-  button.onclick=function(event){
-   event.preventDefault();
-   event.stopPropagation();
-   setSeriesStatus(button.dataset.title,button.dataset.status);
-  };
- });
-}
-
-document.addEventListener("click",e=>{const fav=e.target.closest("[data-favorite]");if(fav){const title=fav.dataset.favorite;favorites[title]=!favorites[title];if(!favorites[title])delete favorites[title];try{localStorage.setItem(FAVORITE_KEY,JSON.stringify(favorites))}catch(e){}render();if(!$("profileModal").classList.contains("hidden"))openProfile(title);return}const prof=e.target.closest("[data-profile]");if(prof){openProfile(prof.dataset.profile);return}let b=e.target.closest("[data-status]");if(b){let t=b.dataset.title,s=b.dataset.status;if(statuses[t]===s)delete statuses[t];else statuses[t]=s;save();diaryEvent(t,statuses[t]?statusName(statuses[t]):"Status avmarkerad");render();if(!$("profileModal").classList.contains("hidden"))openProfile(t);}});
+document.addEventListener("click",e=>{const status=e.target.closest("button[data-status]");if(status){setSeriesStatus(status.dataset.title,status.dataset.status);return}const fav=e.target.closest("[data-favorite]");if(fav){const title=fav.dataset.favorite;favorites[title]=!favorites[title];if(!favorites[title])delete favorites[title];try{localStorage.setItem(FAVORITE_KEY,JSON.stringify(favorites))}catch(e){}render();if(!$("profileModal").classList.contains("hidden"))openProfile(title);return}const prof=e.target.closest("[data-profile]");if(prof){openProfile(prof.dataset.profile);return}});
 document.querySelectorAll(".navbtn").forEach(b=>b.addEventListener("click",()=>{view=b.dataset.view;render()}));
 $("profileContent").addEventListener("click",e=>{if(e.target.id==="savePersonalBtn"){const title=$("profileTitle")?.textContent;if(!title)return;const p=personalFor(title);p.rating=Math.max(0,Math.min(10,Number($("profileRating").value)||0));p.notes=$("profileNotes").value;p.next=$("profileNext").checked;p.seasonWatch=$("profileWatch").checked;p.seasonNote=$("profileSeasonNote").value;savePersonal();render();openProfile(title);}});
 $("closeProfile").onclick=()=>$("profileModal").classList.add("hidden");$("profileModal").addEventListener("click",e=>{if(e.target===$("profileModal"))$("profileModal").classList.add("hidden")});document.addEventListener("keydown",e=>{if(e.key==="Escape")$("profileModal").classList.add("hidden")});async function loadGenreMetadata(){const missing=SERIES.filter(s=>!metadata[s.title]);let index=0;const workers=Array.from({length:4},async()=>{while(index<missing.length){const s=missing[index++];await ensureMeta(s)}});await Promise.all(workers)}$("randomDiscover").onclick=()=>{const genre=$("discoverGenre").value;const candidates=SERIES.filter(s=>!reviewed[s.title]&&(!genre||(metadata[s.title]?.genres||[]).includes(genre)));discoverChoice=candidates.length?candidates[Math.floor(Math.random()*candidates.length)].title:null;renderSwipe()};$("discoverGenre").onchange=async()=>{discoverChoice=null;if($("discoverGenre").value)await loadGenreMetadata();renderSwipe()};
 $("notSeenBtn").onclick=()=>chooseDiscover("none");$("discoverStartedBtn").onclick=()=>chooseDiscover("started");$("discoverDoneBtn").onclick=()=>chooseDiscover("done");$("restartDiscover").onclick=()=>{reviewed={};saveReviewed();render()};
 ["search","statusFilter","sort"].forEach(id=>$(id).addEventListener(id==="search"?"input":"change",render));
 $("gridBtn").onclick=()=>{mode="grid";render()};$("listBtn").onclick=()=>{mode="list";render()};
-$("exportBtn").onclick=()=>{const blob=new Blob([JSON.stringify({format:"oblick-backup-v2",statuses,favorites,personal,diary,reviewed},null,2)],{type:"application/json"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="oblick-min-lista.json";a.click();URL.revokeObjectURL(a.href)};
+$("exportBtn").onclick=()=>{const blob=new Blob([JSON.stringify({format:"oblick-backup-v2",statuses,favorites,personal,diary,reviewed},null,2)],{type:"application/json"});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download="oblick-min-lista.json";document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000)};
 $("importFile").onchange=async e=>{const f=e.target.files[0];if(!f)return;try{const d=JSON.parse(await f.text());const incoming=d.statuses||d;if(!incoming||typeof incoming!=="object")throw Error();statuses={...statuses,...incoming};if(d.favorites)favorites={...favorites,...d.favorites};if(d.personal)personal={...personal,...d.personal};if(Array.isArray(d.diary))diary=d.diary;if(d.reviewed)reviewed={...reviewed,...d.reviewed};save();savePersonal();saveReviewed();try{localStorage.setItem(FAVORITE_KEY,JSON.stringify(favorites))}catch(e){}render();alert("Importen är klar.");}catch(err){alert("Filen kunde inte läsas. Välj en JSON-export från OBLICK.")}e.target.value=""};
 render();
 </script>
