@@ -55,6 +55,80 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{ou
 @media(max-width:600px){.brand{gap:9px}.wordmark{font-size:19px;letter-spacing:.19em}.brand-note{font-size:12px}.header-right{font-size:9px;letter-spacing:.12em}.section-head{align-items:start}.section-head h2{font-size:29px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 12px}.poster-title{font-size:23px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 
+/* Art direction pass: less template, more independent film journal */
+:root{
+ --bg:#11100f;--panel:#171514;--panel2:#211d1a;--line:#3a332e;
+ --text:#e9e0d3;--muted:#a69a8c;--red:#9d3d32;--red2:#c16a59;
+ --serif:"Baskerville", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+ --sans:"Helvetica Neue", Helvetica, Arial, sans-serif;
+ --surface-shadow:none;
+}
+body{background:var(--bg);letter-spacing:0;line-height:1.55}
+.topline{height:2px;background:#9d3d32}
+header{background:var(--bg);padding-top:28px;padding-bottom:24px}
+.brand{gap:16px}
+.wordmark{font-size:20px;font-weight:800;letter-spacing:.32em}
+.wordmark span{color:var(--red2)}
+.brand-note{font-size:13px;color:#b7a797}
+.header-right{font-size:9px;letter-spacing:.13em;color:#928579}
+.hero{background:none;padding-top:55px;padding-bottom:42px;gap:48px}
+.hero h1{font-size:clamp(48px,7.2vw,94px);font-weight:400;line-height:.91;letter-spacing:-.075em;max-width:760px}
+.hero h1 em{color:#c16a59;font-style:italic}
+.hero p{font-size:14px;max-width:430px;color:#b4a99d;line-height:1.8}
+.eyebrow{font-size:9px;letter-spacing:.18em;color:#c16a59}
+.stats{border-top:1px solid #514238;gap:8px}
+.stat strong{font-size:32px;font-weight:400}
+.stat span{font-size:9px;letter-spacing:.1em}
+.layout{grid-template-columns:205px minmax(0,1fr)}
+.sidebar{background:none;padding-top:34px}
+.navbtn{border-radius:0;padding:10px 9px;font-size:12px}
+.navbtn:hover,.navbtn.active{background:#211b18;border-left-color:#c16a59}
+.side-title{font-size:9px;letter-spacing:.17em}
+.content{padding-top:34px}
+.search input,.control{border-radius:0;background:#171514;border-color:#3c342f;box-shadow:none}
+.search input:focus,.control:focus{border-color:#9d6a58;box-shadow:none}
+.view-toggle{border-radius:0}
+.view-toggle button.active{background:#87372e}
+.section-head{border-bottom-color:#514238;margin-bottom:21px}
+.section-head h2{font-size:clamp(30px,3.2vw,40px);font-weight:400;letter-spacing:-.055em}
+.section-head p{max-width:560px}
+.grid{grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:33px 20px}
+.poster{border:0;border-bottom:2px solid #6b342b;border-radius:0;box-shadow:none;filter:saturate(.82);transition:filter .2s ease}
+.poster:before{background:linear-gradient(180deg,rgba(20,15,13,.02),rgba(20,15,13,.08) 48%,rgba(0,0,0,.65))}
+.series-card:hover .poster{transform:none;border-color:#c16a59;box-shadow:none;filter:saturate(1)}
+.poster-title{font-size:clamp(19px,1.8vw,24px);font-weight:400;letter-spacing:-.035em}
+.poster-num{font-size:9px;letter-spacing:.08em}
+.card-meta{padding-top:10px}
+.card-title{font-size:12px;font-weight:600;letter-spacing:.01em}
+.card-year{font-size:10px}
+.card-actions{gap:4px}
+.status-btn,.favorite-btn{border-radius:0;background:transparent;font-size:9px;letter-spacing:.01em}
+.status-btn{padding:7px 3px}
+.status-btn.chosen{background:#87372e;border-color:#87372e}
+.status-btn:hover,.favorite-btn:hover{background:#291c18;border-color:#b66b5d}
+.small-btn{border-radius:0!important;box-shadow:none!important}
+.notice,.discover-panel,.stats-dashboard,.profile-dialog{border-radius:0!important;background:#171514!important;box-shadow:none!important}
+.discover-card{border-radius:0!important;box-shadow:none!important}
+.discover-action,.discover-tags span,.current-status{border-radius:0!important}
+.stat-tile{border-radius:0!important;background:#1a1715!important}
+.bar-fill{background:#9d3d32!important}
+.profile-overlay{backdrop-filter:none}
+.profile-dialog{border:1px solid #4a3c33!important}
+.personal-fields input,.personal-fields textarea,.personal-fields select{border-radius:0!important;box-shadow:none!important}
+@media(max-width:760px){
+ .hero{padding-top:39px;padding-bottom:31px;gap:22px}
+ .hero h1{font-size:clamp(44px,12vw,72px)}
+ .layout{grid-template-columns:1fr}
+ .sidebar{padding-top:15px}
+ .grid{grid-template-columns:repeat(auto-fill,minmax(125px,1fr));gap:25px 13px}
+}
+@media(max-width:600px){
+ .brand{gap:10px}.wordmark{font-size:18px;letter-spacing:.24em}
+ .brand-note{font-size:11px}
+ .header-right{letter-spacing:.06em}
+ .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:25px 12px}
+}
+
 </style>
 </head>
 <body>
