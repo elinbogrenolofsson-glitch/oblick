@@ -113,8 +113,8 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
 .home-shelf-head h2{margin:7px 0 5px;color:var(--ink);font:normal clamp(27px,3vw,38px)/1 var(--display);letter-spacing:-.045em}
 .home-shelf-head p{margin:0;color:var(--muted);font:10px var(--mono)}
 .shelf-link{padding:7px 0;border:0;border-bottom:1px solid var(--line-dark);background:transparent;color:var(--red);font:9px var(--mono);white-space:nowrap}
-.home-rail{display:flex;align-items:start;gap:19px;max-width:100%;overflow-x:auto;overflow-y:hidden;padding:3px 4px 14px;overscroll-behavior-x:contain;scroll-snap-type:x proximity;scrollbar-width:thin;scrollbar-color:var(--line-dark) transparent;-webkit-overflow-scrolling:touch;touch-action:pan-x}
-.home-rail .series-card{flex:0 0 clamp(140px,15vw,190px);min-width:0;scroll-snap-align:start}
+.home-rail{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));align-items:start;gap:19px;max-width:100%;padding:3px 4px 14px}
+.home-rail .series-card{min-width:0;scroll-snap-align:start}
 .home-rail .poster{aspect-ratio:2/2.55}
 .home-rail .home-rail .card-actions{display:none}
 .home-rail .card-meta{padding-top:9px}
@@ -201,6 +201,8 @@ footer{display:flex;justify-content:space-between;gap:15px;padding:22px var(--gu
  .nav-caption{display:none}
  .nav-items{margin:0;max-width:none;justify-content:flex-start}
  .navbtn{min-height:47px;font-size:11px}
+ .home-rail{display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;touch-action:pan-x}
+ .home-rail .series-card{flex:0 0 clamp(140px,28vw,190px)}
  .content{padding-top:27px}
  .toolbar{display:block}
  .toolbar-label{margin-bottom:12px}
