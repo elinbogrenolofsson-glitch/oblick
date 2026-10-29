@@ -10,6 +10,7 @@
   --gutter:clamp(20px,5vw,78px);--content:1480px;
 }
 *{box-sizing:border-box}
+html,body{max-width:100%;overflow-x:hidden}
 html{scroll-behavior:smooth;background:var(--paper)}
 body{margin:0;background:var(--paper-light);color:var(--ink);font:14px/1.5 var(--sans)}
 button,input,select,textarea{font:inherit}
@@ -123,7 +124,7 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
 .discover-intro h2 em{color:var(--red)}
 .discover-intro p{max-width:500px;margin:0 auto 17px;color:var(--muted);line-height:1.7}
 .discover-intro .control{max-width:180px}
-.discover-card{display:grid;grid-template-columns:1fr 1fr;max-width:760px;min-height:360px;margin:0 auto;background:var(--paper);border:1px solid var(--line);.profile-poster{box-shadow:none}
+.discover-card{display:grid;grid-template-columns:1fr 1fr;max-width:760px;min-height:360px;margin:0 auto;background:var(--paper);border:1px solid var(--line)}
 .discover-art{position:relative;display:flex;min-height:360px;flex-direction:column;justify-content:space-between;padding:18px;background-color:#39332c;background-position:center;background-size:cover}
 .discover-index{position:relative;z-index:1;color:#fff4e6}
 .discover-index{font:9px var(--mono);letter-spacing:.12em}
@@ -145,7 +146,7 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
 .profile-dialog{position:relative;width:min(900px,100%);max-height:90vh;overflow:auto;padding:clamp(22px,4vw,42px);background:var(--paper-light);box-shadow:0 18px 60px #0005}
 .profile-close{position:absolute;top:12px;right:15px;z-index:2;width:36px;height:36px;border:0;background:transparent;color:var(--ink);font:30px var(--serif)}
 .profile-layout{display:grid;grid-template-columns:minmax(190px,.75fr) minmax(0,1.25fr);gap:clamp(24px,4vw,46px)}
-.profile-poster{min-height:430px;background-color:#98836d;background-position:center;background-size:cover;.profile-poster{box-shadow:none}
+.profile-poster{min-height:430px;background-color:#98836d;background-position:center;background-size:cover;box-shadow:none}
 .profile-text h2{margin:10px 0;font:normal clamp(35px,5vw,56px)/.95 var(--serif);letter-spacing:-.05em}
 .profile-text>p{color:var(--ink-soft);font:14px/1.7 var(--serif)}
 .profile-status-line{display:flex;justify-content:space-between;gap:12px;margin:20px 0;padding:10px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font:10px var(--mono)}
