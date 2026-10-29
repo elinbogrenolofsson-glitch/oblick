@@ -6,7 +6,7 @@
   --line:#cfc3b1;--line-dark:#a99b86;
   --red:#8e382d;--red-dark:#702a23;
   --serif:Georgia,"Times New Roman",serif;
-  --display:"manifold-cf",Manifold,"Arial",sans-serif;
+  --display:manifold-extd-cf,sans-serif;
   --mono:"Courier New",monospace;--sans:Arial,Helvetica,sans-serif;
   --gutter:clamp(20px,5vw,78px);--content:1480px;
 }
