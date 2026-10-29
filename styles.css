@@ -23,7 +23,7 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
 .wordmark span{color:var(--red)}
 .brand-note{color:var(--muted);font:italic 14px var(--serif)}
 .header-right{display:flex;gap:10px;color:var(--muted);font:9px var(--mono);letter-spacing:.13em}
-.hero{padding:0 var(--gutter);background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.hero{max-width:1220px;margin:0 auto;padding:0 var(--gutter);background:var(--paper);border:1px solid var(--line);border-top:0}
 .hero-kicker,.hero-baseline{display:flex;justify-content:space-between;gap:15px;color:var(--red);font:9px var(--mono);letter-spacing:.13em}
 .hero-kicker{max-width:var(--content);margin:auto;padding:19px 0 0}
 .hero-main{display:grid;grid-template-columns:minmax(0,1fr) minmax(230px,300px);align-items:center;gap:clamp(35px,8vw,130px);max-width:var(--content);margin:auto;padding:34px 0 35px}
