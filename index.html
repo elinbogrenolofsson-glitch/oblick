@@ -1,20 +1,105 @@
 <!doctype html>
 <html lang="sv">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#191714">
-<title>OBLICK — Seriearkiv</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#211d19">
+  <title>OBLICK — Seriearkiv</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="topline"></div>
-<header><div class="brand"><div class="wordmark">OB<span>L</span>ICK</div><div class="brand-note">ett personligt seriearkiv</div></div><div class="header-right">Index / TV & berättelser</div></header>
-<section class="hero"><div><div class="eyebrow">Ditt privata tittarregister</div><h1>Berättelser att<br><em>återvända till.</em></h1><p>Ett personligt arkiv för serier du följer, avslutar och vill minnas. Sök, sortera och bygg din egen överblick.</p><button class="archive-surprise" id="randomArchiveBtn" type="button"><span>UR ARKIVET</span> Överraska mig med en serie <b>↗</b></button></div><div class="stats"><div class="stat"><strong id="totalStat">0</strong><span>I arkivet</span></div><div class="stat"><strong id="startedStat">0</strong><span>Påbörjade</span></div><div class="stat"><strong id="doneStat">0</strong><span>Sett klart</span></div></div></section>
-<div class="layout"><aside class="sidebar"><div class="side-title">Samling</div><button class="navbtn active" data-view="all">Alla serier <span class="count" id="allCount">0</span></button><button class="navbtn" data-view="started">Påbörjat <span class="count" id="startedCount">0</span></button><button class="navbtn" data-view="done">Sett klart <span class="count" id="doneCount">0</span></button><button class="navbtn" data-view="mine">Min lista <span class="count" id="mineCount">0</span></button><button class="navbtn" data-view="favorites">Favoriter <span class="count" id="favoriteCount">0</span></button><button class="navbtn" data-view="later">Titta senare <span class="count" id="watchLaterCount">0</span></button><button class="navbtn" data-view="next">Att se härnäst <span class="count" id="nextCount">0</span></button><button class="navbtn" data-view="watch">Säsongsbevakning <span class="count" id="watchCount">0</span></button><button class="navbtn" data-view="stats">Statistik</button><button class="navbtn" data-view="discover">Upptäck ↗</button><div class="side-block"><div class="side-title">Arkivnotering</div><p class="side-copy">Dina statusval sparas automatiskt i den här webbläsaren.</p><div class="notice">Obs: uppgifterna är lokala och synkas inte automatiskt mellan enheter.</div></div></aside>
-<main class="content"><section id="discoverPanel" class="discover-panel hidden"><div class="discover-intro"><div class="eyebrow">Slumpa fram nästa serie</div><h2>Vet du inte vad du ska se?</h2><p>Ta en serie i taget. Filtrera efter genre och välj bland serier du inte redan har granskat.</p><select id="discoverGenre" class="control" aria-label="Välj genre"><option value="">Alla genrer</option><option value="Drama">Drama</option><option value="Comedy">Komedi</option><option value="Crime">Krim</option><option value="Thriller">Thriller</option><option value="Science-Fiction">Sci-fi</option><option value="Romance">Romantik</option><option value="Fantasy">Fantasy</option><option value="Mystery">Mysterium</option><option value="Action">Action</option><option value="Family">Familj</option></select> <button class="small-btn" id="randomDiscover">Slumpa igen ↻</button></div><div id="discoverCard" class="discover-card"></div><div class="discover-controls"><button class="discover-action nope" id="notSeenBtn">Inte sett</button><button class="discover-action started" id="discoverStartedBtn">Påbörjat</button><button class="discover-action done" id="discoverDoneBtn">Sett klart</button></div><div class="discover-bottom"><span id="discoverProgress">0 av 0 granskade</span><button class="small-btn" id="restartDiscover">Börja om från början ↻</button></div></section><section id="homeHighlights" class="home-highlights hidden"><div class="home-shelf"><div class="home-shelf-head"><div><div class="eyebrow">Fortsätt berättelsen</div><h2>Påbörjade serier</h2><p>Serier du redan har börjat följa.</p></div><button class="shelf-link" data-view="started">Visa alla ↗</button></div><div id="homeStarted" class="home-rail"></div></div><div class="home-shelf"><div class="home-shelf-head"><div><div class="eyebrow">Utvalda ur arkivet</div><h2>Dina favoriter</h2><p>Berättelser du vill hålla lite närmare.</p></div><button class="shelf-link" data-view="favorites">Visa alla ↗</button></div><div id="homeFavorites" class="home-rail"></div></div><div class="home-shelf"><div class="home-shelf-head"><div><div class="eyebrow">Sparat till senare</div><h2>På vänt</h2><p>Serier du vill återvända till när det passar.</p></div><button class="shelf-link" data-view="later">Visa alla ↗</button></div><div id="homeLater" class="home-rail"></div></div></section><div class="toolbar"><div class="search"><input id="search" type="search" placeholder="Sök efter en serie…" aria-label="Sök efter en serie"></div><select id="statusFilter" class="control" aria-label="Filtrera status"><option value="all">Alla statusar</option><option value="none">Ej markerade</option><option value="started">Påbörjat</option><option value="done">Sett klart</option></select><select id="sort" class="control" aria-label="Sortera"><option value="az">Titel A–Ö</option><option value="za">Titel Ö–A</option><option value="year">År, nyast först</option></select><div class="view-toggle"><button id="gridBtn" class="active" aria-label="Affischvy">▦</button><button id="listBtn" aria-label="Listvy">☷</button></div></div><div class="section-head"><div><h2 id="viewTitle">Alla serier</h2><p id="viewSub">En katalog över dina berättelser.</p></div><div class="results-label" id="resultCount">0 titlar</div></div><div id="results" class="grid"></div><div id="empty" class="empty hidden"><strong>Här är det fortfarande tyst.</strong>Inga serier matchar dina filter. Prova en annan sökning eller återställ filtren.<br><button class="small-btn" id="clearFiltersBtn" type="button" style="margin-top:14px">Rensa sökning och filter ↺</button></div><section id="statsPanel" class="hidden"><div class="section-head"><div><h2>Arkivets statistik</h2><p>En överblick över din tittarhistorik.</p></div></div><div id="statsContent" class="stats-dashboard"></div></section></main></div><div id="profileModal" class="profile-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="profileTitle"><div class="profile-dialog"><button class="profile-close" id="closeProfile" aria-label="Stäng">×</button><div id="profileContent"></div></div></div>
-<footer><span>OBLICK / SERIEARKIV</span><span>En katalog i ständig förändring</span></footer>
-<script src="series-data.js" defer></script>
-<script src="app.js" defer></script>
+  <div class="topline"></div>
+  <header class="masthead">
+    <div class="brand">
+      <div class="wordmark">OB<span>L</span>ICK</div>
+      <div class="brand-note">ett personligt seriearkiv</div>
+    </div>
+    <div class="header-right"><span>INVENTARIUM</span><span>·</span><span>TV & BERÄTTELSER</span></div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-kicker"><span>OB / 001</span><span>DIN PRIVATA SAMLING</span><span>ETT LEVANDE REGISTER</span></div>
+      <div class="hero-main">
+        <div class="hero-copy">
+          <div class="eyebrow">Ett arkiv över allt du följer</div>
+          <h1>Serier lämnar<br><em>spår efter sig.</em></h1>
+          <p>En plats för berättelser du har börjat på, avslutat eller vill hitta tillbaka till. Samlat, sorterat och bara ditt.</p>
+          <button class="archive-surprise" id="randomArchiveBtn" type="button"><span>UR ARKIVET</span> Överraska mig med en serie <b>↗</b></button>
+        </div>
+        <div class="hero-index">
+          <div class="index-label">ARKIVSTATUS <span>LIVE</span></div>
+          <div class="stats">
+            <div class="stat"><strong id="totalStat">0</strong><span>Serier i arkivet</span></div>
+            <div class="stat"><strong id="startedStat">0</strong><span>Påbörjade</span></div>
+            <div class="stat"><strong id="doneStat">0</strong><span>Sett klart</span></div>
+          </div>
+          <div class="index-foot">UPPDATERAS AUTOMATISKT<br>DIN SAMLING, DIN ORDNING</div>
+        </div>
+      </div>
+      <div class="hero-baseline"><span>OBLICK / SERIEARKIV</span><span>ETT PERSONLIGT REGISTER ÖVER RÖRLIGA BILDER</span><span>01 — ∞</span></div>
+    </section>
+
+    <nav class="archive-nav" aria-label="Arkivets avsnitt">
+      <div class="nav-caption">INNEHÅLL</div>
+      <div class="nav-items">
+        <button class="navbtn active" data-view="all">Alla serier <span class="count" id="allCount">0</span></button>
+        <button class="navbtn" data-view="started">Påbörjat <span class="count" id="startedCount">0</span></button>
+        <button class="navbtn" data-view="done">Sett klart <span class="count" id="doneCount">0</span></button>
+        <button class="navbtn" data-view="mine">Min lista <span class="count" id="mineCount">0</span></button>
+        <button class="navbtn" data-view="favorites">Favoriter <span class="count" id="favoriteCount">0</span></button>
+        <button class="navbtn" data-view="later">Titta senare <span class="count" id="watchLaterCount">0</span></button>
+        <button class="navbtn" data-view="next">Att se härnäst <span class="count" id="nextCount">0</span></button>
+        <button class="navbtn" data-view="watch">Säsongsbevakning <span class="count" id="watchCount">0</span></button>
+        <button class="navbtn" data-view="stats">Statistik</button>
+        <button class="navbtn nav-discover" data-view="discover">Upptäck <span>↗</span></button>
+      </div>
+    </nav>
+
+    <div class="content-wrap">
+      <main class="content">
+        <section id="discoverPanel" class="discover-panel hidden">
+          <div class="discover-intro">
+            <div class="eyebrow">Slumpa fram nästa serie</div>
+            <h2>Vad ska fånga<br><em>din uppmärksamhet?</em></h2>
+            <p>Ta en serie i taget. Filtrera efter genre och välj bland serier du inte redan har granskat.</p>
+            <select id="discoverGenre" class="control" aria-label="Välj genre">
+              <option value="">Alla genrer</option><option value="Drama">Drama</option><option value="Comedy">Komedi</option><option value="Crime">Krim</option><option value="Thriller">Thriller</option><option value="Science-Fiction">Sci-fi</option><option value="Romance">Romantik</option><option value="Fantasy">Fantasy</option><option value="Mystery">Mysterium</option><option value="Action">Action</option><option value="Family">Familj</option>
+            </select>
+            <button class="small-btn" id="randomDiscover">Slumpa igen ↻</button>
+          </div>
+          <div id="discoverCard" class="discover-card"></div>
+          <div class="discover-controls"><button class="discover-action nope" id="notSeenBtn">Inte sett</button><button class="discover-action started" id="discoverStartedBtn">Påbörjat</button><button class="discover-action done" id="discoverDoneBtn">Sett klart</button></div>
+          <div class="discover-bottom"><span id="discoverProgress">0 av 0 granskade</span><button class="small-btn" id="restartDiscover">Börja om från början ↻</button></div>
+        </section>
+
+        <section id="homeHighlights" class="home-highlights hidden">
+          <div class="home-shelf"><div class="home-shelf-head"><div><div class="eyebrow">01 / Fortsätt berättelsen</div><h2>Påbörjade serier</h2><p>Serier du redan har börjat följa.</p></div><button class="shelf-link" data-view="started">Visa alla ↗</button></div><div id="homeStarted" class="home-rail"></div></div>
+          <div class="home-shelf"><div class="home-shelf-head"><div><div class="eyebrow">02 / Utvalda ur arkivet</div><h2>Dina favoriter</h2><p>Berättelser du vill hålla lite närmare.</p></div><button class="shelf-link" data-view="favorites">Visa alla ↗</button></div><div id="homeFavorites" class="home-rail"></div></div>
+          <div class="home-shelf"><div class="home-shelf-head"><div><div class="eyebrow">03 / Sparat till senare</div><h2>På vänt</h2><p>Serier du vill återvända till när det passar.</p></div><button class="shelf-link" data-view="later">Visa alla ↗</button></div><div id="homeLater" class="home-rail"></div></div>
+        </section>
+
+        <div class="toolbar">
+          <div class="toolbar-label"><span class="eyebrow">Bläddra i samlingen</span><span class="toolbar-note">SÖK / SORTERA / FILTRERA</span></div>
+          <div class="toolbar-controls">
+            <div class="search"><input id="search" type="search" placeholder="Sök efter en serie…" aria-label="Sök efter en serie"></div>
+            <select id="statusFilter" class="control" aria-label="Filtrera status"><option value="all">Alla statusar</option><option value="none">Ej markerade</option><option value="started">Påbörjat</option><option value="done">Sett klart</option></select>
+            <select id="sort" class="control" aria-label="Sortera"><option value="az">Titel A–Ö</option><option value="za">Titel Ö–A</option><option value="year">År, nyast först</option></select>
+            <div class="view-toggle"><button id="gridBtn" class="active" aria-label="Affischvy">▦</button><button id="listBtn" aria-label="Listvy">☷</button></div>
+          </div>
+        </div>
+
+        <div class="section-head"><div><div class="eyebrow">Katalog / 01</div><h2 id="viewTitle">Alla serier</h2><p id="viewSub">En katalog över dina berättelser.</p></div><div class="results-label" id="resultCount">0 titlar</div></div>
+        <div id="results" class="grid"></div>
+        <div id="empty" class="empty hidden"><strong>Här är det fortfarande tyst.</strong>Inga serier matchar dina filter. Prova en annan sökning eller återställ filtren.<br><button class="small-btn" id="clearFiltersBtn" type="button" style="margin-top:14px">Rensa sökning och filter ↺</button></div>
+        <section id="statsPanel" class="hidden"><div class="section-head"><div><div class="eyebrow">Överblick / 02</div><h2>Arkivets statistik</h2><p>En överblick över din tittarhistorik.</p></div></div><div id="statsContent" class="stats-dashboard"></div></section>
+      </main>
+    </div>
+  </main>
+
+  <div id="profileModal" class="profile-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="profileTitle"><div class="profile-dialog"><button class="profile-close" id="closeProfile" aria-label="Stäng">×</button><div id="profileContent"></div></div></div>
+  <footer><span>OBLICK / SERIEARKIV</span><span>EN KATALOG I STÄNDIG FÖRÄNDRING</span><span>STOCKHOLM · EST. 2026</span></footer>
+  <script src="series-data.js" defer></script>
+  <script src="app.js" defer></script>
 </body>
 </html>
